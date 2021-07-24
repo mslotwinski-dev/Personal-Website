@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="en">
 <head>
 
 <meta charset="utf-8">
@@ -53,13 +53,14 @@ Mateusz Słotwiński
 
 <ul>
     <li>HTML<span class="skillRate"><span class="skillRateFunction">9</span></span></li>
-    <li>CSS<span class="skillRate"><span class="skillRateFunction">7</span></span></li>
-    <li>JavaScript<span class="skillRate"><span class="skillRateFunction">5</span></span></li><ul>
-        <li>jQuery<span class="skillRate"><span class="skillRateFunction">6</span></span></li>
+    <li>CSS<span class="skillRate"><span class="skillRateFunction">8</span></span></li>
+    <li>JavaScript<span class="skillRate"><span class="skillRateFunction">6</span></span></li><ul>
         <li>Vue<span class="skillRate"><span class="skillRateFunction">0</span></span></li>
-        <li>React<span class="skillRate"><span class="skillRateFunction">1</span></span></li>    </ul></li>
+        <li>React<span class="skillRate"><span class="skillRateFunction">2</span></span></li>
+        <li>NextJS<span class="skillRate"><span class="skillRateFunction">0</span></span></li>
+        <li>NodeJS<span class="skillRate"><span class="skillRateFunction">0</span></span></li>		</ul></li>
+    <li>TypeScript<span class="skillRate"><span class="skillRateFunction">3</span></span></li>
     <li>C++<span class="skillRate"><span class="skillRateFunction">3</span></span></li>
-    <li>TypeScript<span class="skillRate"><span class="skillRateFunction">2</span></span></li>
     <li>Kotlin<span class="skillRate"><span class="skillRateFunction">0</span></span></li>	
     <li>Python<span class="skillRate"><span class="skillRateFunction">0</span></span></li>
     <li>MySQL<span class="skillRate"><span class="skillRateFunction">0</span></span></li>
@@ -133,30 +134,7 @@ Unia Wolności (The Freedom Union) is a fictional political party whose program 
 <div style="height:10vh"></div>
 
 
-<script language="javascript" type="text/javascript">
-// Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec
-teraz = new Date();
-dzien = new Date("Apr 11 2004 00:00:00");
-
-lat = parseInt(teraz-dzien)/31557600000;
-
-lat = Math.floor(lat)
-document.getElementById("age").innerHTML = (lat);
-
-const skillRate = () => {
-    while (document.querySelector(".skillRateFunction")) {
-    var element = document.querySelector(".skillRateFunction");
-    element.style.width = element.textContent + "0%"
-    element.classList.remove("skillRateFunction");}
-}
-
-skillRate ();
-
-const link = (adress) => {
-    window.location.href = adress;
-}
-
-</script>
+<script src="scripts.js"></script>
 
 </body>
 </html>
