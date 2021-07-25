@@ -1,4 +1,4 @@
-# paprotka2137.github.io
+# mywebsite
 
 ## Project setup
 ```

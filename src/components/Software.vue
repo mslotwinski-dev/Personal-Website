@@ -1,23 +1,25 @@
 <template>
     <article class="dataCell" id="edu">
-        <h1>Education</h1>
-        <EducationDegree :degree= 'degree' v-for="degree in degrees" :key="degree.Field" />
+        <h1>Software</h1>
+        <ul>
+            <SoftwareItem :item= 'item' v-for="software in softwares" :key="software.Name" />
+        </ul>
     </article>
 </template>
 
 <script>
 
-import EducationDegree from './EducationDegree.vue'
-import { degrees } from '../scripts/education'
+import SoftwareItem from './SoftwareItem.vue'
+import { softwares } from '../scripts/softwares'
 
 export default {
   data () {
     return {
-      degrees
+      softwares
     }
   },
   components: {
-    EducationDegree
+    SoftwareItem
   }
 }
 

@@ -17,18 +17,16 @@
     </article>
 </template>
 
-<script>
+<script lang="ts">
+import { defineComponent } from 'vue'
 
-import age from '../scripts/age.js'
+import age from '../scripts/age'
 
-export default {
-    data () {
-        return {
-            myAge: age
-        }
-       
-    }
-}
+export default defineComponent({
+  data () {
+    return { myAge: age }
+  }
+})
 
 </script>
 
