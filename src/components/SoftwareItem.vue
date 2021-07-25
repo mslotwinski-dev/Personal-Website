@@ -1,8 +1,11 @@
 <template>
   <li>
-    {{software.Name}}
+    <div class='codeName'>
+
+        <img class='codeImg' :src="'/assets/software/' + software.Name + '.png'" />
+        {{software.Name}}</div>
     <span class="skillRate">
-        <span>
+        <span :style="{'width': software.Skill*10 + '%'}" >
           {{software.Skill}}
         </span>
     </span>
@@ -13,15 +16,11 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  props: ['software']
+  props: ['software', 'backSoftware']
 })
-
-var element = document.querySelector('.skillRateFunction') as HTMLElement
-element.style.width = element.textContent + '0%'
-
 </script>
 
-<style scoped>
+<style>
 @import '../main.css';
 
 li {
@@ -56,6 +55,7 @@ ul > ul > li {
   max-width:30vw;
   border-radius:6px;
   background-color: #262626;
+  margin:0;
 }
 
 .skillRate:after {
@@ -72,9 +72,23 @@ ul > ul > li {
 .skillRate span {
   display:block;
   height:100%;
+  width:100%;
   background-color: #0096bb;
   border-radius:6px;
   font-size:0;
 }
+</style>
 
+<style scoped>
+.codeImg {
+  width:25px;
+  height:25px;
+  display:inline-block;
+  margin:0 10px;
+}
+
+.codeName {
+  display:flex;
+  align-items:center;
+}
 </style>

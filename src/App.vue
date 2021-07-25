@@ -26,6 +26,7 @@ export default defineComponent({
     Software
   }
 })
+
 </script>
 
 <style>

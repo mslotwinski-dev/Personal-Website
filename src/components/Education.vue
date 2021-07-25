@@ -35,6 +35,10 @@ section {
   margin:25px auto;
 }
 
+section:hover {
+  background-color:#b8c4c7;
+}
+
 section:last-child {
   opacity:0.65;
 }

@@ -26,8 +26,13 @@ export default defineComponent({
 
 </script>
 
-<style scoped>
+<style>
 @import '../main.css';
+
+h2 {
+  text-align: center;
+  font-size:calc(10px + 1vw);
+}
 
 ul {
   font-size:calc(8px + 0.8vw);
