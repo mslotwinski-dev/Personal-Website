@@ -1,24 +1,24 @@
 <template>
     <article>
-        <h1>Education</h1>
-        <EducationItem :degree= 'degree' v-for="degree in degrees" :key="degree.Field" />
+        <h1>Experience</h1>
+        <ExperienceItem :work= 'work' v-for="work in works" :key="work.Name" />
     </article>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import EducationItem from './items/EducationItem.vue'
-import { degrees } from '../scripts/education'
+import ExperienceItem from './items/ExperienceItem.vue'
+import { works } from '../scripts/exp'
 
 export default defineComponent({
   data () {
     return {
-      degrees
+      works
     }
   },
   components: {
-    EducationItem
+    ExperienceItem
   }
 })
 
@@ -38,14 +38,12 @@ section {
   font-size:calc(8px + 0.8vw);
   max-width:80vw;
   width:900px;
+  border-radius:10px;
+  align-items:center;
 }
 
 section:hover {
   background-color:#b8c4c7;
-}
-
-section:last-child {
-  opacity:0.65;
 }
 
 </style>

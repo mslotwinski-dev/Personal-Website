@@ -38,11 +38,6 @@ const Angular: Software = {
   Skill: 0
 }
 
-const Python: Software = {
-  Name: 'Python',
-  Skill: 2
-}
-
 export const softwares: Software[] = [
   HTML, CSS, JS, TS, Vue, React, Angular
 ]

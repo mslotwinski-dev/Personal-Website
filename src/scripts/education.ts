@@ -13,14 +13,64 @@ interface University {
   Place: string
 }
 
-const economics: University = {
-  Field: 'Economics',
-  Spec: 'Global Economy',
+const test: University = {
+  Field: 'Test field',
+  Spec: 'Specialization',
   Degree: Degree.MASTER,
-  University: 'University of Warsaw',
-  Year: 2028,
+  University: 'University name',
+  Year: 2137,
   Place: 'Warsaw, Poland'
 }
+
+// ---SWEET DREAMS---
+// const economics: University = {
+//   Field: 'Economics',
+//   Spec: 'Global Economy',
+//   Degree: Degree.MASTER,
+//   University: 'University of Warsaw',
+//   Year: 2028,
+//   Place: 'Warsaw, Poland'
+// }
+// const math: University = {
+//   Field: 'Mathematics',
+//   Spec: 'Mathematical Analysis',
+//   Degree: Degree.MASTER,
+//   University: 'University of Warsaw',
+//   Year: 2028,
+//   Place: 'Warsaw, Poland'
+// }
+// const physics: University = {
+//   Field: 'Physics',
+//   Spec: 'Quantum physics',
+//   Degree: Degree.MASTER,
+//   University: 'University of Warsaw',
+//   Year: 2028,
+//   Place: 'Warsaw, Poland'
+// }
+// const it: University = {
+//   Field: 'IT',
+//   Spec: 'Web Debelopment',
+//   Degree: Degree.MASTER,
+//   University: 'University of Warsaw',
+//   Year: 2028,
+//   Place: 'Warsaw, Poland'
+// }
+// const mechatronics: University = {
+//   Field: 'Mechatronics',
+//   Spec: 'Idk',
+//   Degree: Degree.MASTER,
+//   University: 'University of Warsaw',
+//   Year: 2028,
+//   Place: 'Warsaw, Poland'
+// }
+// const biology: University = {
+//   Field: 'Biology',
+//   Spec: 'Idk',
+//   Degree: Degree.MASTER,
+//   University: 'University of Warsaw',
+//   Year: 2028,
+//   Place: 'Warsaw, Poland'
+// }
 
 const IVLO: University = {
   Field: 'High School',
@@ -32,5 +82,5 @@ const IVLO: University = {
 }
 
 export const degrees: University[] = [
-  economics, IVLO
+  test, IVLO
 ]

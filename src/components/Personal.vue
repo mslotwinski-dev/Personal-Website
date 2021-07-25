@@ -30,6 +30,18 @@ export default defineComponent({
 
 </script>
 
-<style>
-@import '../main.css';
+<style scoped>
+
+section {
+    display:flex;
+    justify-content:space-between;
+    padding:5px;
+    border-radius:5px;
+    transition: 0.2s all;
+    cursor:pointer;
+    font-size:calc(8px + 0.8vw);
+    max-width:80vw;
+    width:900px;
+    margin:auto;
+}
 </style>

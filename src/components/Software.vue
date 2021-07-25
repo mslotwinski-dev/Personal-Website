@@ -10,7 +10,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import SoftwareItem from './SoftwareItem.vue'
+import SoftwareItem from './items/SoftwareItem.vue'
 import { softwares } from '../scripts/softwares'
 
 export default defineComponent({
@@ -27,7 +27,6 @@ export default defineComponent({
 </script>
 
 <style>
-@import '../main.css';
 
 h2 {
   text-align: center;
@@ -39,7 +38,7 @@ ul {
   max-width:80vw;
   width:900px;
   margin:auto;
-  font-weight:bold;
+  font-weight:500;
   list-style-type: none;
   padding:0;
 }

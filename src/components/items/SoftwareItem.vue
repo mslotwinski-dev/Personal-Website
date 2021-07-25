@@ -16,12 +16,11 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  props: ['software', 'backSoftware']
+  props: ['software']
 })
 </script>
 
 <style>
-@import '../main.css';
 
 li {
   padding:5px;

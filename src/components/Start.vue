@@ -14,7 +14,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-@import '../main.css';
 
 header {
   font-size:calc(20px + 2vw);

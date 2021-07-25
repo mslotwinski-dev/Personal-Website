@@ -25,7 +25,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-@import '../main.css';
 
 #field {
     font-weight:500;
