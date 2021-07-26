@@ -1,29 +1,42 @@
 <template>
   <article>
-    <h1></h1>
-    <!-- <ProjectsItem :project= 'project' v-for="project in projects" :key="project" /> -->
+    <h1>Interests</h1>
+      <section>
+        <InsterestsItem :interest= 'interest' v-for="interest in interests" :key="interest.Name" />
+      </section>
   </article>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-// import ProjectsItem from './items/ProjectsItem.vue'
-// import { projects } from '../scripts/projects'
+import InsterestsItem from './items/InsterestsItem.vue'
+import { interests } from '../scripts/interests'
 
-// export default defineComponent({
-//   data () {
-//     return {
-//       projects
-//     }
-//   },
-//   components: {
-//     ProjectsItem
-//   }
-// })
+export default defineComponent({
+  data () {
+    return {
+      interests
+    }
+  },
+  components: {
+    InsterestsItem
+  }
+})
 
 </script>
 
-<style>
+<style scoped>
+section {
+    background-color:#c4cbcd;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:5px;
+    border-radius:10px;
+    width:900px;
+    max-width:80vw;
+    margin:auto;
+}
 
 </style>

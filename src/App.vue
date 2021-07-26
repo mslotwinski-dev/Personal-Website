@@ -8,6 +8,8 @@
       <Software />
       <Langs />
       <Projects />
+      <Interests />
+      <Contact />
     </main>
   </div>
 </template>
@@ -22,8 +24,8 @@ import Experience from './components/Experience.vue'
 import Software from './components/Software.vue'
 import Langs from './components/Langs.vue'
 import Projects from './components/Projects.vue'
-// import Interests from './components/Interests.vue'
-// import Contact from './components/Contact.vue'
+import Interests from './components/Interests.vue'
+import Contact from './components/Contact.vue'
 
 export default defineComponent({
   name: 'App',
@@ -34,9 +36,9 @@ export default defineComponent({
     Experience,
     Software,
     Langs,
-    Projects
-    // Interests,
-    // Contact
+    Projects,
+    Interests,
+    Contact
   }
 })
 
@@ -137,39 +139,6 @@ main {
     width:95vw;
     max-width:1700px;
     margin:auto;
-}
-
-#interests section {
-    background-color:#c4cbcd;
-    flex-wrap:wrap;
-    padding:10px;
-    border-radius:10px;
-}
-
-#interests span {
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:#00647d;
-    font-weight:bold;
-    padding:5px 10px;
-    border-radius:10px;
-    color:#e3e3e3;
-    cursor:pointer;
-    margin:10px;
-    flex-grow:1;
-    transition: 0.2s all;
-}
-
-#interests span:hover {
-    background-color:#137c96;
-}
-
-#interests img {
-    height:calc(10px + 1vw);
-    display:inline-block;
-    margin:5px 10px;
-    filter:invert(1);
 }
 
 </style>
