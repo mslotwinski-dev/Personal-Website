@@ -1,12 +1,11 @@
 <template>
   <li>
     <div class='codeName'>
-
         <img class='codeImg' :src="'/assets/software/' + software.Name + '.png'" />
-        {{software.Name}}</div>
+        {{software.Name}}
+    </div>
     <span class="skillRate">
         <span :style="{'width': software.Skill*10 + '%'}" >
-          {{software.Skill}}
         </span>
     </span>
   </li>
@@ -25,8 +24,6 @@ export default defineComponent({
 li {
   padding:5px;
   border-radius:5px;
-  width: 850px;
-  max-width:75vw;
   height:calc(13px + 1.3vw);
   transition:0.2s all;
   cursor:pointer;
@@ -37,15 +34,6 @@ li {
 
 .dataCell li:hover, .dataCell section:hover {
   background-color: #b2bec2;
-}
-
-ul > ul {
-  margin-left:40px;
-}
-
-ul > ul > li {
-  width: 810px;
-  max-width:calc(75vw - 40px);
 }
 
 .skillRate {
@@ -76,12 +64,14 @@ ul > ul > li {
   border-radius:6px;
   font-size:0;
 }
+
 </style>
 
 <style scoped>
-.codeImg {
-  width:25px;
-  height:25px;
+
+img {
+  width:calc( 15px + 0.5vw );
+  height:calc( 15px + 0.5vw );
   display:inline-block;
   margin:0 10px;
 }

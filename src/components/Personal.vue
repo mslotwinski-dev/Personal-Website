@@ -3,11 +3,11 @@
         <h1>Personal data</h1>
         <section>
             <div>Age:</div>
-            <div>{{ myAge }}</div>
+            <div>{{ age }}</div>
         </section>
         <section>
             <div>Home:</div>
-            <div>Rzeszów, Poland</div>
+            <div>{{home}}</div>
         </section>
         <section>
             <div>Contact:</div>
@@ -20,11 +20,11 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import age from '../scripts/age'
+import { age, home } from '../scripts/age'
 
 export default defineComponent({
   data () {
-    return { myAge: age }
+    return { age: age, home: home }
   }
 })
 

@@ -13,14 +13,24 @@ interface University {
   Place: string
 }
 
-const test: University = {
-  Field: 'Test field',
-  Spec: 'Specialization',
-  Degree: Degree.MASTER,
-  University: 'University name',
-  Year: 2137,
-  Place: 'Warsaw, Poland'
-}
+export const degrees: University[] = [
+  {
+    Field: 'Test field',
+    Spec: 'Specialization',
+    Degree: Degree.MASTER,
+    University: 'University name',
+    Year: 2137,
+    Place: 'Warsaw, Poland'
+  },
+  {
+    Field: 'High School',
+    Spec: 'Mathematics • Physics • IT',
+    Degree: null,
+    University: 'IV Liceum Ogólnokształcące w Rzeszowie',
+    Year: 2023,
+    Place: 'Rzeszow, Poland'
+  }
+]
 
 // ---SWEET DREAMS---
 // const economics: University = {
@@ -71,16 +81,3 @@ const test: University = {
 //   Year: 2028,
 //   Place: 'Warsaw, Poland'
 // }
-
-const IVLO: University = {
-  Field: 'High School',
-  Spec: 'Mathematics • Physics • IT',
-  Degree: null,
-  University: 'IV Liceum Ogólnokształcące w Rzeszowie',
-  Year: 2023,
-  Place: 'Rzeszow, Poland'
-}
-
-export const degrees: University[] = [
-  test, IVLO
-]

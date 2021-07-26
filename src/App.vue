@@ -6,6 +6,8 @@
       <Education />
       <Experience />
       <Software />
+      <Langs />
+      <Projects />
     </main>
   </div>
 </template>
@@ -18,6 +20,10 @@ import Personal from './components/Personal.vue'
 import Education from './components/Education.vue'
 import Experience from './components/Experience.vue'
 import Software from './components/Software.vue'
+import Langs from './components/Langs.vue'
+import Projects from './components/Projects.vue'
+// import Interests from './components/Interests.vue'
+// import Contact from './components/Contact.vue'
 
 export default defineComponent({
   name: 'App',
@@ -26,7 +32,11 @@ export default defineComponent({
     Personal,
     Education,
     Experience,
-    Software
+    Software,
+    Langs,
+    Projects
+    // Interests,
+    // Contact
   }
 })
 
@@ -129,18 +139,6 @@ main {
     margin:auto;
 }
 
-.nativeBar span {
-    background-color: #a17c93;
-}
-
-.nativeText {
-    display:inline-block;
-    font-size:calc(6px + 0.6vw);
-    text-transform:uppercase;
-    color: #6d455e;
-    margin:0 5px;
-}
-
 #interests section {
     background-color:#c4cbcd;
     flex-wrap:wrap;
@@ -172,44 +170,6 @@ main {
     display:inline-block;
     margin:5px 10px;
     filter:invert(1);
-}
-
-#exp section {
-    background-color:#c4cbcd;
-    flex-wrap:wrap;
-    padding:10px;
-    border-radius:10px;
-    align-items:center;
-    margin:25px auto;
-}
-
-#exp div:last-child, #exp span {
-    font-size:calc(6px + 0.6vw);
-}
-
-#exp span {
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
-.position1 {
-  color:#00647d;
-}
-
-#projects section {
-  background-color:#c4cbcd;
-  flex-wrap:wrap;
-  padding:calc(7px + 1.5vw);
-  border-radius:10px;
-  align-items:center;
-  font-size:calc(6.5px + 0.65vw);
-  margin:25px auto;
-}
-.moreInfo {
-  font-size:calc(7.5px + 0.75vw) !important;
-}
-.moreInfo:hover {
-  color:#00647d
 }
 
 </style>

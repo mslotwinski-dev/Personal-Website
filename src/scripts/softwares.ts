@@ -3,41 +3,33 @@ interface Software {
   Skill: number
 }
 
-const HTML: Software = {
-  Name: 'HTML',
-  Skill: 10
-}
-
-const CSS: Software = {
-  Name: 'CSS',
-  Skill: 8
-}
-
-const JS: Software = {
-  Name: 'JavaScript',
-  Skill: 6
-}
-
-const TS: Software = {
-  Name: 'TypeScript',
-  Skill: 5
-}
-
-const Vue: Software = {
-  Name: 'Vue',
-  Skill: 3
-}
-
-const React: Software = {
-  Name: 'React',
-  Skill: 1
-}
-
-const Angular: Software = {
-  Name: 'Angular',
-  Skill: 0
-}
-
 export const softwares: Software[] = [
-  HTML, CSS, JS, TS, Vue, React, Angular
+  {
+    Name: 'HTML',
+    Skill: 10
+  },
+  {
+    Name: 'CSS',
+    Skill: 8
+  },
+  {
+    Name: 'JavaScript',
+    Skill: 6
+  },
+  {
+    Name: 'TypeScript',
+    Skill: 5
+  },
+  {
+    Name: 'Vue',
+    Skill: 4
+  },
+  {
+    Name: 'React',
+    Skill: 1
+  },
+  {
+    Name: 'Angular',
+    Skill: 0
+  }
 ]
