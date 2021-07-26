@@ -32,7 +32,7 @@ section {
   display:flex;
   justify-content:space-between;
   padding:10px;
-  border-radius:5px;
+  border-radius:10px;
   transition: 0.2s all;
   cursor:pointer;
   font-size:calc(8px + 0.8vw);

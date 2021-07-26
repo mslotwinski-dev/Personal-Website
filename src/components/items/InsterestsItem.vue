@@ -25,7 +25,7 @@ a {
     border-radius:10px;
     color:#e3e3e3;
     cursor:pointer;
-    margin:10px;
+    margin:calc(4px + 0.3vw);
     flex-grow:1;
     transition: 0.2s all;
     font-size: calc(8px + 0.8vw);

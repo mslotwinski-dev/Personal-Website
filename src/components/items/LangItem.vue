@@ -52,4 +52,9 @@ img {
     color: #6d455e;
     margin:0 5px;
 }
+
+.codeName {
+  display: flex;
+  align-items: center;
+}
 </style>
