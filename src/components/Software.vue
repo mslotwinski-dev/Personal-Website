@@ -1,8 +1,13 @@
 <template>
     <article class="dataCell" id="edu">
         <h1>Software</h1>
+        <h2>Frontend</h2>
         <ul>
-            <SoftwareItem :software= 'software' v-for="software in softwares" :key="software.Name" />
+            <SoftwareItem imgFolder= 'frontend-langs' :software= 'software' v-for="software in softwaresFront" :key="software.Name" />
+        </ul>
+        <h2>Backend</h2>
+        <ul>
+            <SoftwareItem imgFolder= 'backend-langs' :software= 'software' v-for="software in softwaresBack" :key="software.Name" />
         </ul>
     </article>
 </template>
@@ -11,12 +16,13 @@
 import { defineComponent } from 'vue'
 
 import SoftwareItem from './items/SoftwareItem.vue'
-import { softwares } from '../scripts/softwares'
+import { softwaresFront, softwaresBack } from '../scripts/langs'
 
 export default defineComponent({
   data () {
     return {
-      softwares
+      softwaresFront,
+      softwaresBack
     }
   },
   components: {
@@ -29,8 +35,9 @@ export default defineComponent({
 <style>
 
 h2 {
+  margin:0;
   text-align: center;
-  font-size:calc(10px + 1vw);
+  font-size:calc(9px + 0.9vw);
 }
 
 ul {

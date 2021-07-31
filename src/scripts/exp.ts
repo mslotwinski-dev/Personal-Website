@@ -2,7 +2,7 @@ interface Work {
   Name: string,
   Position: string,
   HowLong: string,
-  Color: string | null
+  Color?: string
 }
 
 export const works: Work[] = [

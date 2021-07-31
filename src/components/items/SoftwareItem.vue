@@ -1,11 +1,14 @@
 <template>
   <li>
     <div class='codeName'>
-        <img class='codeImg' :src="'/assets/software/' + software.Name + '.png'" />
+        <img class='codeImg' :src="'/assets/thumbnails/' + imgFolder + '/' + software.Name.toLowerCase() + '.png'" />
         {{software.Name}}
+        <span class="nativeText" :class="{ notNative: !software.Native }">
+            Native
+        </span>
     </div>
     <span class="skillRate">
-        <span :style="{'width': software.Skill*10 + '%'}" >
+        <span :style="{'width': software.Skill*10 + '%'}" :class="{nativeColor: software.Native}" >
         </span>
     </span>
   </li>
@@ -15,7 +18,7 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  props: ['software']
+  props: ['software', 'imgFolder']
 })
 </script>
 
@@ -79,5 +82,20 @@ img {
 .codeName {
   display:flex;
   align-items:center;
+}
+
+.nativeColor {
+    background-color: #a17c93;
+}
+
+.nativeText {
+    font-size:calc(6px + 0.6vw);
+    text-transform:uppercase;
+    color: #6d455e;
+    margin:0 5px;
+}
+
+.notNative {
+  display:none;
 }
 </style>

@@ -1,68 +1,54 @@
 interface Interest {
     Name:string,
-    Link:string
+    Link?:string
 }
 
 export const interests: Interest[] = [
   {
-    Name: 'Economics',
-    Link: 'Economics'
+    Name: 'Economics'
   },
   {
-    Name: 'Mathematics',
-    Link: 'Mathematics'
+    Name: 'Mathematics'
   },
   {
-    Name: 'Physics',
-    Link: 'Physics'
+    Name: 'Physics'
   },
   {
-    Name: 'Informatics',
-    Link: 'Informatics'
+    Name: 'Informatics'
   },
   {
-    Name: 'Law',
-    Link: 'Law'
+    Name: 'Law'
   },
   {
-    Name: 'History',
-    Link: 'History'
+    Name: 'History'
   },
   {
-    Name: 'Politics',
-    Link: 'Politics'
+    Name: 'Politics'
   },
   {
-    Name: 'Philosophy',
-    Link: 'Philosophy'
+    Name: 'Philosophy'
   },
   {
-    Name: 'Sociology',
-    Link: 'Sociology'
+    Name: 'Sociology'
   },
   {
-    Name: 'Psychology',
-    Link: 'Psychology'
+    Name: 'Psychology'
   },
   {
-    Name: 'Psychiatry',
-    Link: 'Psychiatry'
+    Name: 'Psychiatry'
   },
   {
     Name: 'Neurology',
     Link: 'Neuroscience'
   },
   {
-    Name: 'Biology',
-    Link: 'Biology'
+    Name: 'Biology'
   },
   {
-    Name: 'Zoology',
-    Link: 'Zoology'
+    Name: 'Zoology'
   },
   {
-    Name: 'Anthropology',
-    Link: 'Anthropology'
+    Name: 'Anthropology'
   },
   {
     Name: 'Management',

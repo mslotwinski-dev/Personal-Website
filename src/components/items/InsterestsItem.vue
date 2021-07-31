@@ -1,6 +1,6 @@
 <template>
-  <a :href="'https://en.wikipedia.org/wiki/' + interest.Link " >
-    <img class='codeImg' :src="'/assets/interests/' + interest.Name + '.svg'" />
+  <a :href="'https://en.wikipedia.org/wiki/' + ( interest.Link || interest.Name ) " >
+    <img class='codeImg' :src="'/assets/interests/' + interest.Name.toLowerCase() + '.svg'" />
     {{interest.Name}}
   </a>
 </template>

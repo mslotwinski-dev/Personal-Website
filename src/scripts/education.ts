@@ -15,14 +15,6 @@ interface University {
 
 export const degrees: University[] = [
   {
-    Field: 'Test field',
-    Spec: 'Specialization',
-    Degree: Degree.MASTER,
-    University: 'University name',
-    Year: 2137,
-    Place: 'Warsaw, Poland'
-  },
-  {
     Field: 'High School',
     Spec: 'Mathematics • Physics • IT',
     Degree: null,

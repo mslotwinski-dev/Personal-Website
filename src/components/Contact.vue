@@ -9,22 +9,17 @@
           <div><input type="submit" value="Send"/></div>
       </form>
   </article>
+  <footer>
+  </footer>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import emailjs from 'emailjs-com'
+import { mailApp } from '../scripts/contact'
 
 export default defineComponent({
   methods: {
-    sendEmail: (e:any) => {
-      emailjs.sendForm('service_fsc7z1s', 'template_o4685da', e.target, 'user_p0k5jW3dTiblvpU5h4UvO')
-        .then((result) => {
-          alert('SUCCESS!')
-        }, (error) => {
-          alert('FAILED...' + error)
-        })
-    }
+    sendEmail: mailApp
   },
   name: 'Contact'
 })
@@ -82,8 +77,11 @@ div {
   width:100%;
 }
 
-article {
+footer {
+  text-align:center;
   margin-bottom:10vh;
+  font-size:calc(8px + 0.8vw);
+  font-weight:500
 }
 
 </style>
