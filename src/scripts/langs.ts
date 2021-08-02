@@ -1,10 +1,10 @@
-interface Software {
+interface Item {
   Name: string,
   Skill: number
   Native?: boolean // Only in human langs
 }
 
-export const softwaresFront: Software[] = [
+export const softwaresFront: Item[] = [
   {
     Name: 'HTML',
     Skill: 10
@@ -27,7 +27,7 @@ export const softwaresFront: Software[] = [
   },
   {
     Name: 'React',
-    Skill: 1
+    Skill: 2
   },
   {
     Name: 'Angular',
@@ -35,14 +35,14 @@ export const softwaresFront: Software[] = [
   }
 ]
 
-export const softwaresBack: Software[] = [
+export const softwaresBack: Item[] = [
   {
     Name: 'NodeJS',
-    Skill: 2
+    Skill: 3
   },
   {
     Name: 'MongoDB',
-    Skill: 1
+    Skill: 2
   },
   {
     Name: 'Go',
@@ -54,7 +54,7 @@ export const softwaresBack: Software[] = [
   // }
 ]
 
-export const humanLangs: Software[] = [
+export const humanLangs: Item[] = [
   {
     Name: 'Polish',
     Skill: 10,

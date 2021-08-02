@@ -7,7 +7,11 @@
         </section>
         <section>
             <div>Home:</div>
-            <div>{{home}}</div>
+            <div v-on:click="showPlace">
+                <span @mouseover="isHovered = true" @mouseleave="isHovered = false" :class="{notHovered: !isHovered}"></span>
+                <Modal ref="map" title='Rzeszów on map' image="maps/blank" content='' />
+                {{home.format()}}
+            </div>
         </section>
         <section>
             <div>Contact:</div>
@@ -19,12 +23,21 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-
+import Modal from './modals/Modal.vue'
 import { age, home } from '../scripts/age'
 
 export default defineComponent({
+  methods: {
+    showPlace () {
+      const child:any = this.$refs.map
+      child.toogleModal()
+    }
+  },
   data () {
-    return { age: age, home: home }
+    return { age: age, home: home, isHovered: false }
+  },
+  components: {
+    Modal
   }
 })
 
@@ -44,4 +57,24 @@ section {
     width:900px;
     margin:auto;
 }
+
+div {
+    display:flex;
+    align-items:center;
+}
+
+span {
+    display:inline-block;
+    width:calc( 15px + 0.5vw );
+    height:calc( 15px + 0.5vw );
+    background-image:url('../assets/icons/question.svg');
+    background-size:cover;
+    margin:0 10px;
+    transition: 0.2s all linear;
+}
+
+.notHovered {
+    filter: brightness(0)
+}
+
 </style>

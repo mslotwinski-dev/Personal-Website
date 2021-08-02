@@ -3,11 +3,11 @@
         <h1>Software</h1>
         <h2>Frontend</h2>
         <ul>
-            <SoftwareItem imgFolder= 'frontend-langs' :software= 'software' v-for="software in softwaresFront" :key="software.Name" />
+            <ListItem imgFolder= 'frontend-langs' :item= 'item' v-for="item in softwaresFront" :key="item.Name" />
         </ul>
         <h2>Backend</h2>
         <ul>
-            <SoftwareItem imgFolder= 'backend-langs' :software= 'software' v-for="software in softwaresBack" :key="software.Name" />
+            <ListItem imgFolder= 'backend-langs' :item= 'item' v-for="item in softwaresBack" :key="item.Name" />
         </ul>
     </article>
 </template>
@@ -15,7 +15,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import SoftwareItem from './items/SoftwareItem.vue'
+import ListItem from './items/ListItem.vue'
 import { softwaresFront, softwaresBack } from '../scripts/langs'
 
 export default defineComponent({
@@ -26,7 +26,7 @@ export default defineComponent({
     }
   },
   components: {
-    SoftwareItem
+    ListItem
   }
 })
 

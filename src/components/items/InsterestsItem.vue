@@ -1,6 +1,6 @@
 <template>
   <a :href="'https://en.wikipedia.org/wiki/' + ( interest.Link || interest.Name ) " >
-    <img class='codeImg' :src="'/assets/interests/' + interest.Name.toLowerCase() + '.svg'" />
+    <img :src="getImgUrl(interest.Name.toLowerCase())">
     {{interest.Name}}
   </a>
 </template>
@@ -9,6 +9,11 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  methods: {
+    getImgUrl (pic: string) {
+      return require('../../assets/interests/' + pic + '.svg')
+    }
+  },
   props: ['interest']
 })
 

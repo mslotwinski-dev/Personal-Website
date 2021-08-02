@@ -24,7 +24,7 @@ header {
   justify-content:center;
   align-items:center;
   display:flex;
-  background-image:url(../img/start.png);
+  background-image:url(../assets/start.png);
   background-size:cover;
   background-position:center;
   flex-direction:column;

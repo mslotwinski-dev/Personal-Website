@@ -2,7 +2,7 @@
     <article class="dataCell">
         <h1>Languages</h1>
         <ul>
-            <SoftwareItem imgFolder= 'human-langs' :software= 'software' v-for="software in humanLangs" :key="software.Name" />
+            <ListItem imgFolder= 'human-langs' :item= 'item' v-for="item in humanLangs" :key="item.Name" />
         </ul>
     </article>
 </template>
@@ -10,7 +10,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import SoftwareItem from './items/SoftwareItem.vue'
+import ListItem from './items/ListItem.vue'
 import { humanLangs } from '../scripts/langs'
 
 export default defineComponent({
@@ -20,7 +20,7 @@ export default defineComponent({
     }
   },
   components: {
-    SoftwareItem
+    ListItem
   }
 })
 

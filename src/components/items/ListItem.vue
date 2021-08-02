@@ -1,15 +1,14 @@
 <template>
   <li>
     <div class='codeName'>
-        <img class='codeImg' :src="'/assets/thumbnails/' + imgFolder + '/' + software.Name.toLowerCase() + '.png'" />
-        {{software.Name}}
-        <span class="nativeText" :class="{ notNative: !software.Native }">
+        <img :src="getImgUrl(imgFolder, item.Name.toLowerCase())" />
+        {{item.Name}}
+        <span class="nativeText" :class="{ notNative: !item.Native }">
             Native
         </span>
     </div>
     <span class="skillRate">
-        <span :style="{'width': software.Skill*10 + '%'}" :class="{nativeColor: software.Native}" >
-        </span>
+        <span :style="{'width': item.Skill*10 + '%'}" :class="{nativeColor: item.Native}" ></span>
     </span>
   </li>
 </template>
@@ -18,11 +17,16 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  props: ['software', 'imgFolder']
+  methods: {
+    getImgUrl (folder:string, pic: string) {
+      return require('../../assets/thumbnails/' + folder + '/' + pic + '.png')
+    }
+  },
+  props: ['item', 'imgFolder']
 })
 </script>
 
-<style>
+<style scoped>
 
 li {
   padding:5px;
@@ -68,10 +72,6 @@ li {
   font-size:0;
 }
 
-</style>
-
-<style scoped>
-
 img {
   width:calc( 15px + 0.5vw );
   height:calc( 15px + 0.5vw );
@@ -98,4 +98,5 @@ img {
 .notNative {
   display:none;
 }
+
 </style>
