@@ -8,8 +8,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import ExperienceItem from './items/ExperienceItem.vue'
-import { works } from '../scripts/exp'
+import ExperienceItem from '../items/ExperienceItem.vue'
+import { works } from '../../scripts/exp'
 
 export default defineComponent({
   data () {

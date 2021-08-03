@@ -85,7 +85,7 @@ img {
 }
 
 .nativeColor {
-    background-color: #a17c93;
+    background-color: #a17c93 !important;
 }
 
 .nativeText {

@@ -46,7 +46,8 @@ export default defineComponent({
     height:100vh;
     top:0;
     left:0;
-    background-color:#00141a50
+    background-color:#00141a50;
+    cursor: default;
 }
 
 .modal {

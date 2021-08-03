@@ -10,8 +10,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import InsterestsItem from './items/InsterestsItem.vue'
-import { interests } from '../scripts/interests'
+import InsterestsItem from '../items/InsterestsItem.vue'
+import { interests } from '../../scripts/interests'
 
 export default defineComponent({
   data () {

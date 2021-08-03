@@ -8,8 +8,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import EducationItem from './items/EducationItem.vue'
-import { degrees } from '../scripts/education'
+import EducationItem from '../items/EducationItem.vue'
+import { degrees } from '../../scripts/education'
 
 export default defineComponent({
   data () {

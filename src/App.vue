@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Start />
+    <Hero />
     <main>
       <Personal />
       <Education />
@@ -17,20 +17,20 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import Start from './components/Start.vue'
-import Personal from './components/Personal.vue'
-import Education from './components/Education.vue'
-import Experience from './components/Experience.vue'
-import Software from './components/Software.vue'
-import Langs from './components/Langs.vue'
-import Projects from './components/Projects.vue'
-import Interests from './components/Interests.vue'
-import Contact from './components/Contact.vue'
+import Hero from './components/main/1_Hero.vue'
+import Personal from './components/main/2_Personal.vue'
+import Education from './components/main/Education.vue'
+import Experience from './components/main/Experience.vue'
+import Software from './components/main/Software.vue'
+import Langs from './components/main/Langs.vue'
+import Projects from './components/main/Projects.vue'
+import Interests from './components/main/Interests.vue'
+import Contact from './components/main/Contact.vue'
 
 export default defineComponent({
   name: 'App',
   components: {
-    Start,
+    Hero,
     Personal,
     Education,
     Experience,
@@ -122,17 +122,6 @@ h1:before, h1:after {
     flex-grow:1;
     margin:0 20px;
     border:1px solid #262626;
-}
-
-h3 {
-    font-size:calc(8.5px + 0.85vw);
-    font-weight:bold;
-    width:100%;
-    padding:0;
-    margin:calc(4px + 0.4vw) 0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
 }
 
 main {

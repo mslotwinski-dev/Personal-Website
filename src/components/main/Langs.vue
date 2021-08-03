@@ -10,8 +10,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import ListItem from './items/ListItem.vue'
-import { humanLangs } from '../scripts/langs'
+import ListItem from '../items/ListItem.vue'
+import { humanLangs } from '../../scripts/langs'
 
 export default defineComponent({
   data () {

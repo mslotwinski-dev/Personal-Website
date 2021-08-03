@@ -15,8 +15,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import ListItem from './items/ListItem.vue'
-import { softwaresFront, softwaresBack } from '../scripts/langs'
+import ListItem from '../items/ListItem.vue'
+import { softwaresFront, softwaresBack } from '../../scripts/langs'
 
 export default defineComponent({
   data () {
@@ -32,7 +32,7 @@ export default defineComponent({
 
 </script>
 
-<style>
+<style scoped>
 
 h2 {
   margin:0;
