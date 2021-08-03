@@ -1,14 +1,14 @@
 <template>
-    <div class="overlay" :class="{hidden: !showModal}" >
+    <div class="overlay" >
         <div class="modal">
             <div class="title">
                 <b>{{title}}</b>
-                <button v-on:click="toogleModal()" class="close"></button>
+                <button v-on:click="closeModal()"></button>
             </div>
                 <div class="content">
                     <p>
-                        {{content}}
-                        <img :src="getImgUrl(image.toLowerCase())">
+                       <component :is="content">
+                       </component>
                     </p>
             </div>
         </div>
@@ -17,30 +17,27 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Map from './content/Map.vue'
 
 export default defineComponent({
   name: 'Modal',
   methods: {
-    toogleModal () {
-      this.showModal = !this.showModal
-    },
-    getImgUrl (pic: string) {
-      return require('../../assets/modals/' + pic + '.png')
+    closeModal () {
+      this.$emit('closeModal')
     }
   },
-  props: ['content', 'title', 'image'],
+  props: ['content', 'title'],
+  components: {
+    Map
+  },
   data () {
-    return { showModal: false }
+    return { currentComponent: 'Error' }
   }
 })
 
 </script>
 
 <style scoped>
-
-.hidden {
-    display:none;
-}
 
 .overlay {
     z-index:1;
@@ -58,19 +55,18 @@ export default defineComponent({
   box-shadow: 0 10px 20px #00000014;
   left: 50%;
   max-width: 90%;
-  pointer-events: none;
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 90vw;
-  max-width:1000px;
+  max-width:1200px;
   text-align: left;
   max-height: 90vh;
   display: flex;
   flex-direction: column;
 }
 
-.close {
+button {
     align-items: center;
     background: transparent;
     color: #111827;
@@ -78,15 +74,14 @@ export default defineComponent({
     height:calc(13px + 1.3vw);
     width: calc(13px + 1.3vw);
     justify-content: center;
-    pointer-events: none;
     background-image:url('../../assets/icons/close.svg');
     background-size:cover;
+    cursor:pointer;
 }
 
 .title {
     color: #111827;
     padding:calc(7px + 0.7vw);
-    pointer-events: all;
     position: relative;
     width:100%;
     font-size:calc(9px + 0.9vw);
@@ -99,22 +94,13 @@ export default defineComponent({
 
 .content {
     border-top: 1px solid #e0e0e0;
-    padding:calc(7px + 0.7vw);
-    pointer-events: all;
-    overflow: auto;
+    overflow-x:hidden;
     font-size:calc(7px + 0.7vw);
 }
 
 b {
     margin:0;
     font-weight: 500;
-}
-
-img {
-    margin:10px auto;
-    width:95%;
-    display: block;
-    border-radius:5px;
 }
 
 p {

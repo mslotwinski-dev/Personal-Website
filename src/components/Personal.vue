@@ -7,9 +7,9 @@
         </section>
         <section>
             <div>Home:</div>
-            <div v-on:click="showPlace">
-                <span @mouseover="isHovered = true" @mouseleave="isHovered = false" :class="{notHovered: !isHovered}"></span>
-                <Modal ref="map" title='Rzeszów on map' image="maps/blank" content='' />
+            <div>
+                <span v-on:click="renderModal(true)" @mouseover="isHovered = true" @mouseleave="isHovered = false" :class="{notHovered: !isHovered}"></span>
+                  <Modal @closeModal="renderModal(false)" v-if="showModal" ref="modal" title='Rzeszów on map' content='Map'/>
                 {{home.format()}}
             </div>
         </section>
@@ -28,13 +28,12 @@ import { age, home } from '../scripts/age'
 
 export default defineComponent({
   methods: {
-    showPlace () {
-      const child:any = this.$refs.map
-      child.toogleModal()
+    renderModal (arg:boolean) {
+      this.showModal = arg
     }
   },
   data () {
-    return { age: age, home: home, isHovered: false }
+    return { age: age, home: home, isHovered: false, showModal: false }
   },
   components: {
     Modal
@@ -51,7 +50,7 @@ section {
     padding:5px;
     border-radius:5px;
     transition: 0.2s all;
-    cursor:pointer;
+    /* cursor:pointer; */
     font-size:calc(8px + 0.8vw);
     max-width:80vw;
     width:900px;
@@ -71,6 +70,7 @@ span {
     background-size:cover;
     margin:0 10px;
     transition: 0.2s all linear;
+    cursor:pointer
 }
 
 .notHovered {
