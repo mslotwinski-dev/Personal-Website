@@ -6,7 +6,6 @@
         Click here to check my projects!
       </p>
       <button>
-        ABC
       </button>
     </section>
   </article>
@@ -34,7 +33,17 @@ section {
   text-align:center;
 }
 button {
-  background: red;
+  background-color: #00647d;
+  margin:10px;
+  padding:30px;
+  border-radius:50%;
+  background-size:cover;
+  background-image:url('../../assets/icons/projects.png');
+  transition:.2s all;
+}
+
+button:hover {
+  background-position: 0 7px;
 }
 
 p {
