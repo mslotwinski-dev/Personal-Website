@@ -1,21 +1,22 @@
 <template>
   <header>
-    Mateusz Słotwiński
-    <div>
-      Scroll down
-    </div>
+    <Hero />
+    <h2>Mateusz Słotwiński</h2>
+    <h3>Scroll down</h3>
     <Scroll />
   </header>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Scroll from '../misc/Scroll.vue'
+import Scroll from '../../common/styled/Scroll.vue'
+import Hero from '../../common/styled/Hero.vue'
 
 export default defineComponent({
-  name: 'Hero',
+  name: 'Start',
   components: {
-    Scroll
+    Scroll,
+    Hero
   }
 })
 </script>
@@ -23,21 +24,24 @@ export default defineComponent({
 <style scoped>
 
 header {
-  font-size:calc(20px + 2vw);
-  font-weight:600;
   width:100vw;
   height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  background-image:url(../../assets/start.png);
-  background-size:cover;
-  background-position:center;
   flex-direction:column;
 }
 
-div {
+h2 {
+  font-size:calc(20px + 2vw);
+  font-weight:600;
+  margin:0;
+}
+
+h3 {
   font-size:calc(10px + 1vw);
+  font-weight: 500;
+  margin:0;
 }
 
 </style>

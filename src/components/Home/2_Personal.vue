@@ -9,7 +9,7 @@
       <li>
         <div>Home:</div>
         <div>
-          <span v-on:click="renderModal(true)" @mouseover="isHovered = true" @mouseleave="isHovered = false" :class="{notHovered: !isHovered}"></span>
+          <ModalIcon icon="question" v-on:click="renderModal(true)" @mouseover="isHovered = true" @mouseleave="isHovered = false" :class="{notHovered: !isHovered}" />
           <Modal @closeModal="renderModal(false)" v-if="showModal" ref="modal" title='Rzeszów on map' content='Map'/>
           {{home.format()}}
         </div>
@@ -20,7 +20,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Modal from '../modals/Modal.vue'
+import Modal from '../../common/modals/Modal.vue'
+import ModalIcon from '../../common/styled/Icon.vue'
 import { age, home } from '../../scripts/personal'
 
 export default defineComponent({
@@ -38,24 +39,14 @@ export default defineComponent({
     }
   },
   components: {
-    Modal
+    Modal,
+    ModalIcon
   }
 })
 
 </script>
 
 <style scoped>
-
-span {
-    display:inline-block;
-    width:calc( 15px + 0.5vw );
-    height:calc( 15px + 0.5vw );
-    background-image:url('../../assets/icons/question.svg');
-    background-size:cover;
-    margin:0 10px;
-    transition: 0.2s all linear;
-    cursor:pointer
-}
 
 .notHovered {
     filter: brightness(0)

@@ -15,7 +15,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import ListItem from '../items/ListItem.vue'
+import ListItem from '../../common/items/ListItem.vue'
 import { softwaresFront, softwaresBack } from '../../scripts/langs'
 
 export default defineComponent({

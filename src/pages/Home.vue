@@ -15,15 +15,15 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import Start from './components/Home/1_Start.vue'
-import Personal from './components/Home/2_Personal.vue'
-import Education from './components/Home/3_Education.vue'
-import Experience from './components/Home/4_Experience.vue'
-import Software from './components/Home/5_Software.vue'
-import Langs from './components/Home/6_Langs.vue'
-import Projects from './components/Home/7_Projects.vue'
-import Interests from './components/Home/Interests.vue'
-import Contact from './components/Contact/Contact.vue'
+import Start from '../components/1_Start.vue'
+import Personal from '../components/2_Personal.vue'
+import Education from '../components/3_Education.vue'
+import Experience from '../components/4_Experience.vue'
+import Software from '../components/5_Software.vue'
+import Langs from '../components/6_Langs.vue'
+import Projects from '../components/7_Projects.vue'
+import Interests from '../components/Interests.vue'
+import Contact from '../components/Contact.vue'
 
 export default defineComponent({
   name: 'App',
