@@ -1,4 +1,5 @@
 <template>
+  <div>
     <Start />
     <main>
       <Personal />
@@ -10,6 +11,7 @@
       <Interests />
       <Contact />
     </main>
+  </div>
 </template>
 
 <script lang="ts">
@@ -37,6 +39,9 @@ export default defineComponent({
     Projects,
     Interests,
     Contact
+  },
+  mounted () {
+    document.title = 'Mateusz Słotwiński'
   }
 })
 </script>

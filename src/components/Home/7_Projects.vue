@@ -5,8 +5,9 @@
       <p>
         Click here to check my projects!
       </p>
-      <a href="/projects">
-      </a>
+      <router-link to="/projects">
+        <LinkButton icon="projects.png"/>
+      </router-link>
     </section>
   </article>
 </template>
@@ -14,6 +15,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { projects } from '../../scripts/projects'
+import LinkButton from '../../common/styled/LinkButton.vue'
 
 export default defineComponent({
   data () {
@@ -22,6 +24,7 @@ export default defineComponent({
     }
   },
   components: {
+    LinkButton
   }
 })
 
@@ -31,20 +34,6 @@ export default defineComponent({
 section {
   font-size:calc(7px + 0.7vw);
   text-align:center;
-}
-a {
-  display: inline-block;
-  background-color: #00647d;
-  margin:10px;
-  padding:calc(10px + 1vw);
-  border-radius:50%;
-  background-size:cover;
-  background-image:url('../../assets/icons/projects.png');
-  transition:.3s all;
-}
-
-a:hover {
-  background-position: 0 7px;
 }
 
 p {

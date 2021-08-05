@@ -1,8 +1,31 @@
 <template>
-  <router-view/>
+  <router-view v-slot="{ Component }">
+    <transition name="route" mode="in-out">
+      <component :is="Component" />
+    </transition>
+  </router-view>
 </template>
 
 <style>
+
+/* Animations */
+
+.route-enter-from {
+  opacity:0;
+  transform:translateX(2em);
+}
+
+.route-leave-to {
+  opacity:0;
+  transform:translateX(-2em);
+}
+
+.route-enter-active, .route-leave-active {
+  transition: .3s all ease
+}
+
+/* Global styles */
+
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap');
 
 *,*:before,*:after {
@@ -86,5 +109,6 @@ main {
     width:95vw;
     max-width:1700px;
     margin:auto;
+    min-height: 100vh;
 }
 </style>
