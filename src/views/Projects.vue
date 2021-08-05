@@ -15,6 +15,9 @@ export default defineComponent({
   components: {
     BackButton,
     Header
+  },
+  mounted () {
+    document.title = 'My projects'
   }
 })
 </script>
