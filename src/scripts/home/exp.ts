@@ -1,9 +1,4 @@
-interface Work {
-  Name: string,
-  Position: string,
-  HowLong: string,
-  Color?: string
-}
+import { Work } from '../data/data'
 
 export const works: Work[] = [
   {

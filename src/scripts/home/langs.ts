@@ -1,10 +1,6 @@
-interface Item {
-  Name: string,
-  Skill: number
-  Native?: boolean // Only in human langs
-}
+import { LangItem } from '../data/data'
 
-export const softwaresFront: Item[] = [
+export const softwaresFront: LangItem[] = [
   {
     Name: 'HTML',
     Skill: 10
@@ -35,7 +31,7 @@ export const softwaresFront: Item[] = [
   }
 ]
 
-export const softwaresBack: Item[] = [
+export const softwaresBack: LangItem[] = [
   {
     Name: 'NodeJS',
     Skill: 3
@@ -54,7 +50,7 @@ export const softwaresBack: Item[] = [
   // }
 ]
 
-export const humanLangs: Item[] = [
+export const humanLangs: LangItem[] = [
   {
     Name: 'Polish',
     Skill: 10,

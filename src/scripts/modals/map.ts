@@ -1,9 +1,4 @@
-interface City {
-  Name: string,
-  x: number,
-  y: number,
-  right?: number
-}
+import { City } from '../data/data'
 
 export const cities:City[] = [
   // North

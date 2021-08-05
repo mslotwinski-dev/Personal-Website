@@ -9,7 +9,7 @@
 import { defineComponent } from 'vue'
 
 import EducationItem from '../../common/items/EducationItem.vue'
-import { degrees } from '../../scripts/education'
+import { degrees } from '../../scripts/home/education'
 
 export default defineComponent({
   data () {

@@ -14,15 +14,10 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { projects } from '../../scripts/projects'
+
 import LinkButton from '../../common/styled/LinkButton.vue'
 
 export default defineComponent({
-  data () {
-    return {
-      projects
-    }
-  },
   components: {
     LinkButton
   }

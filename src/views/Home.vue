@@ -7,7 +7,7 @@
       <Experience />
       <Software />
       <Langs />
-      <Projects />
+      <ProjectsLink />
       <Interests />
       <Contact />
     </main>
@@ -23,7 +23,7 @@ import Education from '../components/Home/Education.vue'
 import Experience from '../components/Home/Experience.vue'
 import Software from '../components/Home/Software.vue'
 import Langs from '../components/Home/Langs.vue'
-import Projects from '../components/Home/Projects.vue'
+import ProjectsLink from '../components/Home/ProjectsLink.vue'
 import Interests from '../components/Home/Interests.vue'
 import Contact from '../components/Contact/Contact.vue'
 
@@ -36,7 +36,7 @@ export default defineComponent({
     Experience,
     Software,
     Langs,
-    Projects,
+    ProjectsLink,
     Interests,
     Contact
   },

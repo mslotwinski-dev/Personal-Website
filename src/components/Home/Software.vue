@@ -16,7 +16,7 @@
 import { defineComponent } from 'vue'
 
 import ListItem from '../../common/items/ListItem.vue'
-import { softwaresFront, softwaresBack } from '../../scripts/langs'
+import { softwaresFront, softwaresBack } from '../../scripts/home/langs'
 
 export default defineComponent({
   data () {

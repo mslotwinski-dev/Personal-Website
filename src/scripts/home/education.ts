@@ -1,17 +1,4 @@
-enum Degree {
-    BACHELOR = 'Bachelor',
-    MASTER = 'Master',
-    DOCTOR = 'Doctor'
-}
-
-interface University {
-  Field: string,
-  Spec: string,
-  Degree: Degree | null,
-  University: string,
-  Year: number
-  Place: string
-}
+import { University, Degree } from '../data/data'
 
 export const degrees: University[] = [
   {

@@ -11,7 +11,7 @@
 import { defineComponent } from 'vue'
 
 import ListItem from '../../common/items/ListItem.vue'
-import { humanLangs } from '../../scripts/langs'
+import { humanLangs } from '../../scripts/home/langs'
 
 export default defineComponent({
   data () {

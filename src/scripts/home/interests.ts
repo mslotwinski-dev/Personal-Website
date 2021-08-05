@@ -1,7 +1,4 @@
-interface Interest {
-    Name:string,
-    Link?:string
-}
+import { Interest } from '../data/data'
 
 export const interests: Interest[] = [
   {
