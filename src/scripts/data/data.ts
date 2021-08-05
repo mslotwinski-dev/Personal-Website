@@ -51,8 +51,10 @@ export interface Project {
     Name: string,
     Desc: string,
     Link: string,
+    Code: string;
     Created: Date,
-    Langueages:{
+    Logo: string
+    Frontend:{
         Lang: ProjectLang
       Percentage: number
     }[],

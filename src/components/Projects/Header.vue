@@ -22,6 +22,7 @@ export default defineComponent({
     padding-bottom:10px;
     border-bottom:5px solid #b2bec2;
     width:800px;
+    max-width:90vw;
     margin:auto;
   }
 </style>
