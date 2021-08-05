@@ -5,8 +5,8 @@
       <p>
         Click here to check my projects!
       </p>
-      <button>
-      </button>
+      <a href="/projects">
+      </a>
     </section>
   </article>
 </template>
@@ -32,17 +32,18 @@ section {
   font-size:calc(7px + 0.7vw);
   text-align:center;
 }
-button {
+a {
+  display: inline-block;
   background-color: #00647d;
   margin:10px;
-  padding:30px;
+  padding:calc(10px + 1vw);
   border-radius:50%;
   background-size:cover;
   background-image:url('../../assets/icons/projects.png');
-  transition:.2s all;
+  transition:.3s all;
 }
 
-button:hover {
+a:hover {
   background-position: 0 7px;
 }
 

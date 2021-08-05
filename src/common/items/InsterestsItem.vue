@@ -26,7 +26,7 @@ a {
     align-items:center;
     background-color:#00647d;
     font-weight:bold;
-    padding:5px 10px;
+    padding:calc(2px + 0.2vw) calc(3px + 0.5vw);
     border-radius:10px;
     color:#e3e3e3;
     cursor:pointer;
