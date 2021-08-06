@@ -7,9 +7,9 @@ export enum Degree {
 }
 
 export enum LangType {
-    FRONTEND,
-    BACKEND,
-    DATABASE
+    FRONTEND = 'Frontend',
+    BACKEND = 'Backend',
+    DATABASE = 'Database'
 }
 
 // INTERFACES
@@ -41,7 +41,7 @@ export interface Interest {
     Link?:string
 }
 
-export interface ProjectLang {
+export interface SingleLang {
     Name:string,
     Color:string
     Type: LangType
@@ -54,10 +54,10 @@ export interface Project {
     Code: string;
     Created: Date,
     Logo: string
-    Frontend:{
-        Lang: ProjectLang
-      Percentage: number
-    }[],
+    Langs: {
+        Id: SingleLang
+        Percentage: number
+    }[]
     Screenshots: string[]
 }
 

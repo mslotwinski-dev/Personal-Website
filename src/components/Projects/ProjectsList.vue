@@ -8,14 +8,14 @@
 import { defineComponent } from 'vue'
 import SingleProject from '../../common/projects/SingleProject.vue'
 import { projects } from '../../scripts/projects/main'
-import { LanguageArray } from '../../scripts/projects/langs'
+import { LangID } from '../../scripts/projects/langs'
 
 export default defineComponent({
   name: 'ProjectsList',
   data () {
     return {
       projects,
-      LanguageArray
+      LangID
     }
   },
   components: {

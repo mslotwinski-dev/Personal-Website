@@ -1,32 +1,32 @@
-import { LangType, ProjectLang } from '../data/data'
+import { LangType, SingleLang } from '../data/data'
 
-export const LanguageArray:ProjectLang[] = [
-  {
+export const LangID:SingleLang[] = [
+  { // 0
     Name: 'HTML',
     Color: 'e67934',
     Type: LangType.FRONTEND
   },
-  {
+  { // 1
     Name: 'CSS',
     Color: '563d7c',
     Type: LangType.FRONTEND
   },
-  {
+  { // 2
     Name: 'SCSS',
     Color: 'c6538c',
     Type: LangType.FRONTEND
   },
-  {
+  { // 3
     Name: 'Tailwind',
     Color: '06b6d4',
     Type: LangType.FRONTEND
   },
-  {
+  { // 4
     Name: 'JavaScript',
     Color: 'decc3e',
     Type: LangType.FRONTEND
   },
-  {
+  { // 5
     Name: 'TypeScript',
     Color: '2b7489',
     Type: LangType.FRONTEND
