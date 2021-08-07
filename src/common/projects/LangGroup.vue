@@ -38,6 +38,7 @@ export default defineComponent({
   font-weight:500;
   text-align: center;
   border-radius:10px;
+  border:3px solid #045063;
 }
 
 .bar {

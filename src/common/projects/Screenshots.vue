@@ -1,6 +1,6 @@
 <template>
   <div class='screenshots'>
-    <div></div><div></div><div></div>
+    <div v-for="screen in project.Screenshots" :key="screen" :style="{'backgroundImage': 'url(' + getImgUrl(screen) + ')'}"></div>
     <span class='links'>
       <button>Link</button>
       <button>Code</button>
@@ -12,8 +12,13 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Name',
-  props: ['ABC']
+  name: 'Screenshots',
+  props: ['project'],
+  methods: {
+    getImgUrl (pic: string) {
+      return require('../../assets/projects/screenshots/' + pic)
+    }
+  }
 })
 </script>
 
@@ -34,6 +39,7 @@ export default defineComponent({
   background-image: url('../../assets/projects/screenshots/soulgraphy1.png');
   background-size: cover;
   background-position:center;
+  border:3px solid #045063;
 }
 
 .screenshots span {

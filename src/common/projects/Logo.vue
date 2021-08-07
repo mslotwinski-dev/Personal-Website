@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :style="{'backgroundImage': 'url(' + getImgUrl(image) + ')'}">
   </div>
 </template>
 
@@ -7,8 +7,16 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Name',
-  props: ['ABC']
+  name: 'Logo',
+  props: ['project'],
+  methods: {
+    getImgUrl (pic: string) {
+      return require('../../assets/projects/logo/' + pic)
+    }
+  },
+  data () {
+    return { image: this.project.Logo as string }
+  }
 })
 </script>
 
@@ -18,8 +26,8 @@ div {
   height:250px;
   margin:10px;
   border-radius:10px;
-  background-image: url('../../assets/projects/logo/soulgraphy.svg');
   background-size: cover;
   background-position:center;
+  border:3px solid #045063;
 }
 </style>

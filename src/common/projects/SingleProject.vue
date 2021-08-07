@@ -1,7 +1,7 @@
 <template>
     <article>
       <section>
-        <Logo v-if="showProject" />
+        <Logo :project="project" v-if="showProject"/>
         <ProjectData :project="project" @toggleProject="toggleProject" :class="{hideDesc: !showProject}"/>
       </section>
       <div class='langs' v-if="showProject">
@@ -9,7 +9,7 @@
         <LangGroup :project="project" type="Backend" />
         <LangGroup :project="project" type="Database" />
       </div>
-      <Screenshots v-if="showProject"/>
+      <Screenshots :project="project" v-if="showProject"/>
     </article>
 </template>
 
