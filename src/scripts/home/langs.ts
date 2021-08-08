@@ -7,19 +7,19 @@ export const softwaresFront: LangItem[] = [
   },
   {
     Name: 'CSS',
-    Skill: 8
+    Skill: 9
   },
   {
     Name: 'JavaScript',
-    Skill: 6
+    Skill: 7
   },
   {
     Name: 'TypeScript',
-    Skill: 5
+    Skill: 6
   },
   {
     Name: 'Vue',
-    Skill: 4
+    Skill: 5
   },
   {
     Name: 'React',
@@ -38,16 +38,12 @@ export const softwaresBack: LangItem[] = [
   },
   {
     Name: 'MongoDB',
-    Skill: 2
+    Skill: 1
   },
   {
     Name: 'Go',
     Skill: 0
   }
-  // {
-  //   Name: 'Kotlin',
-  //   Skill: 0
-  // }
 ]
 
 export const humanLangs: LangItem[] = [

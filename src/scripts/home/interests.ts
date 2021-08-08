@@ -48,6 +48,9 @@ export const interests: Interest[] = [
     Name: 'Anthropology'
   },
   {
+    Name: 'Electronics'
+  },
+  {
     Name: 'Management',
     Link: 'Management_science'
   }
