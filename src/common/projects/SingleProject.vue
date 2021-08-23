@@ -1,14 +1,12 @@
 <template>
     <article>
       <section>
-        <Logo :project="project" v-if="showProject"/>
+        <div>
+          <Logo :project="project" v-if="showProject"/>
+          <LangGroup :project="project" v-if="showProject"/>
+        </div>
         <ProjectData :project="project" @toggleProject="toggleProject" :class="{hideDesc: !showProject}"/>
       </section>
-      <div class='langs' v-if="showProject">
-        <LangGroup :project="project" type="Frontend" />
-        <LangGroup :project="project" type="Backend" />
-        <LangGroup :project="project" type="Database" />
-      </div>
       <Screenshots :project="project" v-if="showProject"/>
     </article>
 </template>
@@ -62,14 +60,8 @@ article {
 section {
   display:flex;
   justify-content: center;
-  padding:10px;
+  padding:0 10px;
   flex-wrap:wrap-reverse;
-}
-
-.langs {
-  display: flex;
-  justify-content: center;
-  flex-wrap:wrap;
 }
 
 .hideDesc {

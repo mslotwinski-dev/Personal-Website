@@ -1,4 +1,4 @@
-import { LangItem } from '../data/data'
+import { LangItem } from '../types/interfaces'
 
 export const softwaresFront: LangItem[] = [
   {

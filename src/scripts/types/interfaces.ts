@@ -1,18 +1,4 @@
-// ENUMS
-
-export enum Degree {
-    BACHELOR = 'Bachelor',
-    MASTER = 'Master',
-    DOCTOR = 'Doctor'
-}
-
-export enum LangType {
-    FRONTEND = 'Frontend',
-    BACKEND = 'Backend',
-    DATABASE = 'Database'
-}
-
-// INTERFACES
+import { Degree, LangType, ProjectType } from './enums'
 
 export interface University {
     Field: string,
@@ -44,15 +30,16 @@ export interface Interest {
 export interface SingleLang {
     Name:string,
     Color:string
-    Type: LangType
+    Type?: LangType
 }
 
 export interface Project {
     Name: string,
     Desc: string,
+    Category: string,
     Link: string,
     Code: string;
-    Created: Date,
+    Created: string,
     Logo: string
     Langs: {
         Id: SingleLang
@@ -66,20 +53,4 @@ export interface City {
     x: number,
     y: number,
     right?: number
-}
-
-// CLASSES
-
-export class Home {
-    city: string
-    country: string
-
-    constructor (city:string, country:string) {
-      this.city = city
-      this.country = country
-    }
-
-    format () {
-      return `${this.city}, ${this.country}`
-    }
 }

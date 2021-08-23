@@ -1,4 +1,4 @@
-import { City } from '../data/data'
+import { City } from '../types/interfaces'
 
 export const cities:City[] = [
   // North

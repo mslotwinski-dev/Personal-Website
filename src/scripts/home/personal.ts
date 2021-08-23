@@ -1,4 +1,4 @@
-import { Home } from '../data/data'
+import { Home } from '../types/classes'
 
 const today:number = Date.now()
 const born:number = +(new Date('2004-04-11'))

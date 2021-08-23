@@ -28,7 +28,7 @@ export default defineComponent({
   display:flex;
   justify-content: space-around;
   flex-wrap:wrap;
-  padding:10px;
+  padding:0 10px;
 }
 
 .screenshots div {

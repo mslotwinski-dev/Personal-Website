@@ -6,6 +6,10 @@
     <div class='desc'>
       {{project.Desc}}
     </div>
+    <div class="created">
+      <b>Created: </b>
+      {{project.Created}}
+    </div>
   </div>
 </template>
 
@@ -45,6 +49,10 @@ div {
   padding:10px;
   font-size:20px;
   text-align: justify;
+}
+
+.created {
+  font-size:20px;
 }
 
 </style>

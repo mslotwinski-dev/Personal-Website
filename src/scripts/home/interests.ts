@@ -1,4 +1,4 @@
-import { Interest } from '../data/data'
+import { Interest } from '../types/interfaces'
 
 export const interests: Interest[] = [
   {

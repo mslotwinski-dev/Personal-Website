@@ -1,26 +1,22 @@
 <template>
-  <div class='langGroup' v-if="TheseLangs.length > 0">
-    {{type}}
+  <div class='langGroup' v-if="project.Langs.length > 0">
+    Languages
     <div class='bar'>
-        <div v-for="lang in TheseLangs" :key='lang.Id.Name' class='singleBar' :style="{'backgroundColor': '#' + lang.Id.Color, 'width': lang.Percentage + '%'}"></div>
+        <div v-for="lang in project.Langs" :key='lang.Id.Name' class='singleBar' :style="{'backgroundColor': '#' + lang.Id.Color, 'width': lang.Percentage + '%'}"></div>
     </div>
     <div class='list'>
-      <SingleLang :lang="lang" v-for="lang in TheseLangs" :key="lang.Id.Name"/>
+      <SingleLang :lang="lang" v-for="lang in project.Langs" :key="lang.Id.Name"/>
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { LangType } from '../../scripts/data/data'
 import SingleLang from './SingleLang.vue'
 
 export default defineComponent({
   name: 'LangGroup',
-  props: ['project', 'type'],
-  data () {
-    return { TheseLangs: this.project.Langs.filter((value: { Id: { Type: LangType } }) => value.Id.Type === this.type as LangType) }
-  },
+  props: ['project'],
   components: {
     SingleLang
   }
@@ -30,7 +26,7 @@ export default defineComponent({
 <style scoped>
 
 .langGroup {
-  margin:10px;
+  margin:15px 10px;
   padding:10px;
   max-width:350px;
   flex-grow:1;
@@ -56,7 +52,6 @@ export default defineComponent({
 .list {
   display:flex;
   flex-wrap:wrap;
-  justify-content: space-between;
   padding:10px;
 }
 

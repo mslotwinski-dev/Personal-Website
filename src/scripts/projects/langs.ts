@@ -1,6 +1,11 @@
-import { LangType, SingleLang } from '../data/data'
+import { SingleLang } from '../types/interfaces'
+import { LangType } from '../types/enums'
 
 export const LangID:SingleLang[] = [
+  { // 0
+    Name: 'Other',
+    Color: 'd5d8dc'
+  },
   { // 0
     Name: 'HTML',
     Color: 'e67934',
@@ -31,47 +36,82 @@ export const LangID:SingleLang[] = [
     Color: '2b7489',
     Type: LangType.FRONTEND
   },
-  {
+  { // 6
     Name: 'Vue',
     Color: '41b883',
     Type: LangType.FRONTEND
   },
-  {
+  { // 7
     Name: 'React',
     Color: '282c34',
     Type: LangType.FRONTEND
   },
-  {
+  { // 8
     Name: 'Angular',
     Color: 'dd0031',
     Type: LangType.FRONTEND
   },
-  {
+  { // 9
+    Name: 'null',
+    Color: '000000',
+    Type: LangType.FRONTEND
+  },
+  { // 10
     Name: 'NodeJS',
     Color: '57a04a',
     Type: LangType.BACKEND
   },
-  {
+  { // 11
     Name: 'Go',
-    Color: '67d0de',
+    Color: '00ADD8',
     Type: LangType.BACKEND
   },
-  {
+  { // 12
     Name: 'C++',
     Color: 'f34b7d',
     Type: LangType.BACKEND
   },
-  {
-    Name: 'ASP .NET Core',
+  { // 13
+    Name: 'C#',
     Color: '5027d5',
     Type: LangType.BACKEND
   },
-  {
+  { // 14
+    Name: 'Java',
+    Color: '5027d5',
+    Type: LangType.BACKEND
+  },
+  { // 15
+    Name: 'Kotlin',
+    Color: '5027d5',
+    Type: LangType.BACKEND
+  },
+  { // 16
+    Name: 'Python',
+    Color: '255883',
+    Type: LangType.FRONTEND
+  },
+  { // 17
+    Name: 'Django',
+    Color: '103E2E',
+    Type: LangType.FRONTEND
+  },
+  { // 18
+    Name: 'null',
+    Color: '000000',
+    Type: LangType.FRONTEND
+  },
+  { // 19
+    Name: 'null',
+    Color: '000000',
+    Type: LangType.FRONTEND
+  },
+  { // 20
     Name: 'MongoDB',
     Color: '13aa52',
     Type: LangType.DATABASE
   },
-  {
+  { // 21
     Name: 'MySQL',
     Color: '4479a1',
     Type: LangType.DATABASE
