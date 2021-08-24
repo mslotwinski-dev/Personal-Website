@@ -37,7 +37,10 @@ export interface Project {
     Name: string,
     Desc: string,
     Category: string,
-    Link: string,
+    Link: {
+        Content: string,
+        Absolute: boolean
+    },
     Code: string;
     Created: string,
     Logo: string

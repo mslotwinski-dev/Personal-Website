@@ -10,11 +10,13 @@
       <b>Created: </b>
       {{project.Created}}
     </div>
+    <Links :project="project" isShort=true v-if="project.Screenshots.length <= 0"/>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Links from './Links.vue'
 
 export default defineComponent({
   name: 'ProjectData',
@@ -23,6 +25,9 @@ export default defineComponent({
     toggleProject () {
       this.$emit('toggleProject')
     }
+  },
+  components: {
+    Links
   }
 })
 </script>

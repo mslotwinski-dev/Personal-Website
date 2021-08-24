@@ -14,8 +14,11 @@ export const projects: Project[] = [
     Name: 'AnalyseMe',
     Desc: descriptions[0],
     Category: 'Quizzes',
-    Link: 's',
-    Code: 'doce',
+    Link: {
+      Content: 'analyseme',
+      Absolute: false
+    },
+    Code: 'Mateusz-Slotwinski/AnalyseMe',
     Created: 'VI 2020',
     Logo: 'analyseme.png',
     Langs: [
@@ -38,8 +41,11 @@ export const projects: Project[] = [
     Name: 'Soulgraphy',
     Desc: descriptions[2],
     Category: 'Quizzes',
-    Link: 's',
-    Code: 'doce',
+    Link: {
+      Content: 'soulgraphy.me',
+      Absolute: true
+    },
+    Code: '',
     Created: 'VI 2020',
     Logo: 'soulgraphy.png',
     Langs: [
@@ -66,8 +72,11 @@ export const projects: Project[] = [
     Name: 'Personal Webpage',
     Desc: descriptions[4],
     Category: 'Personal',
-    Link: 's',
-    Code: 'doce',
+    Link: {
+      Content: 'mslotwinski.eu',
+      Absolute: true
+    },
+    Code: 'Mateusz-Slotwinski/Personal-Website',
     Created: 'VI 2020',
     Logo: 'personal.png',
     Langs: [
@@ -90,8 +99,11 @@ export const projects: Project[] = [
     Name: 'Note Keeper',
     Desc: descriptions[1],
     Category: 'Minor',
-    Link: 's',
-    Code: 'doce',
+    Link: {
+      Content: '',
+      Absolute: false
+    },
+    Code: 'paprotka2137/NotepadAPP',
     Created: 'VI 2020',
     Logo: 'notekeeper.png',
     Langs: [
@@ -114,8 +126,11 @@ export const projects: Project[] = [
     Name: 'CubeCalc',
     Desc: 'Simple program written in Go, which solves linear, square or even cube equalitions',
     Category: 'Minor',
-    Link: 's',
-    Code: 'doce',
+    Link: {
+      Content: '',
+      Absolute: false
+    },
+    Code: 'Mateusz-Slotwinski/CubeCalc',
     Created: 'VI 2020',
     Logo: 'cubecalc.png',
     Langs: [
@@ -130,8 +145,11 @@ export const projects: Project[] = [
     Name: 'Calculator',
     Desc: 'Calculator, but with nice design c:',
     Category: 'Minor',
-    Link: 's',
-    Code: 'doce',
+    Link: {
+      Content: 'calc',
+      Absolute: false
+    },
+    Code: 'Mateusz-Slotwinski/Calculator',
     Created: 'VI 2020',
     Logo: 'calculator.png',
     Langs: [
@@ -154,8 +172,11 @@ export const projects: Project[] = [
     Name: 'Unia Wolności',
     Desc: descriptions[3],
     Category: 'Minor',
-    Link: 's',
-    Code: 'doce',
+    Link: {
+      Content: 'uniawolnosci',
+      Absolute: false
+    },
+    Code: 'Mateusz-Slotwinski/Unia-Wolnosci',
     Created: 'VI 2020',
     Logo: 'uniawolnosci.png',
     Langs: [
