@@ -11,6 +11,7 @@ export enum LangType {
 }
 
 export enum ProjectType {
+    NONPROFIT = 'Non Profit',
     QUIZZES = 'Quizzes',
     PERSONAL = 'Personal',
     MINOR = 'Minor'

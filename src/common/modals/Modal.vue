@@ -7,7 +7,7 @@
             </div>
                 <div class="content">
                     <p>
-                       <component :is="content">
+                       <component :is="content" :image="image">
                        </component>
                     </p>
             </div>
@@ -18,6 +18,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Map from './content/Map.vue'
+import Image from './content/Image.vue'
 
 export default defineComponent({
   name: 'Modal',
@@ -26,9 +27,10 @@ export default defineComponent({
       this.$emit('closeModal')
     }
   },
-  props: ['content', 'title'],
+  props: ['content', 'title', 'image'],
   components: {
-    Map
+    Map,
+    Image
   },
   data () {
     return { currentComponent: 'Error' }
@@ -42,8 +44,8 @@ export default defineComponent({
 .overlay {
     z-index:1;
     position: fixed;
-    width:100vw;
-    height:100vh;
+    width:100vw !important;
+    height:100vh !important;
     top:0;
     left:0;
     background-color:#00141a50;

@@ -190,5 +190,28 @@ export const projects: Project[] = [
       }
     ],
     Screenshots: []
+  },
+  {
+    Name: 'eScience',
+    Desc: 'Simple website with basic formulas and equalitons',
+    Category: 'Non Profit',
+    Link: {
+      Content: 'escience',
+      Absolute: false
+    },
+    Code: 'Mateusz-Slotwinski/eScience',
+    Created: 'VI 2020',
+    Logo: 'escience.png',
+    Langs: [
+      {
+        Id: LangID[7],
+        Percentage: 85
+      },
+      {
+        Id: LangID[6],
+        Percentage: 15
+      }
+    ],
+    Screenshots: []
   }
 ]
