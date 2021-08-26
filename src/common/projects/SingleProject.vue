@@ -1,13 +1,13 @@
 <template>
     <article>
       <section>
-        <div>
-          <Logo :project="project" v-if="showProject"/>
-          <LangGroup :project="project" v-if="showProject"/>
+        <div class="hgw52a">
+          <Logo :project="project"/>
+          <LangGroup :project="project"/>
         </div>
-        <ProjectData :project="project" @toggleProject="toggleProject" :class="{hideDesc: !showProject}"/>
+        <ProjectData :project="project"/>
       </section>
-      <Screenshots :project="project" v-if="showProject"/>
+      <Screenshots :project="project"/>
     </article>
 </template>
 
@@ -21,25 +21,6 @@ import Screenshots from './Screenshots.vue'
 export default defineComponent({
   name: 'SingleProject',
   props: ['project'],
-  methods: {
-    toggleProject () {
-      this.showProject = !this.showProject
-    },
-    screenEvent () {
-      const w = window.innerWidth
-      if (w > 725) {
-        this.showProject = true
-      } else {
-      }
-    }
-  },
-  created () {
-    window.addEventListener('resize', this.screenEvent)
-    this.screenEvent()
-  },
-  data () {
-    return { showProject: false }
-  },
   components: {
     ProjectData,
     Logo,
@@ -50,6 +31,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
+
 article {
   padding:10px;
   margin:10px;
@@ -67,6 +49,11 @@ section {
 .hideDesc {
   height:60px;
   overflow: hidden;
+}
+
+.hgw52a {
+  max-width:80vw;
+  width:400px;
 }
 
 </style>

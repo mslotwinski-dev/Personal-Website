@@ -1,6 +1,6 @@
 <template>
   <ScreenImage :screen="screen" v-on:click="renderModal(true)" @mouseover="isHovered = true" @mouseleave="isHovered = false" />
-  <Modal @closeModal="renderModal(false)" v-if="showModal" ref="modal" title='Modal' content='image' :image="screen"/>
+  <Modal @closeModal="renderModal(false)" v-if="showModal" ref="modal" title='Screenshot' content='image' :image="screen"/>
 </template>
 
 <script lang="ts">

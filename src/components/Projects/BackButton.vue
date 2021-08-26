@@ -1,6 +1,5 @@
 <template>
   <nav>
-
     <router-link to="/">
       <LinkButton icon="projects.png" class="rotate"/>
     </router-link>
@@ -29,6 +28,7 @@ nav {
     display:flex;
     align-items:center;
     width:800px;
+    max-width:100vw;
 }
 
 .rotate {

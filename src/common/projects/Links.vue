@@ -61,4 +61,15 @@ span {
     order:-1;
   }
 }
+
+@media (max-width:1053px) {
+  .short {
+    position: relative;
+    top:0;
+    right:0;
+    margin: 0 auto;
+    align-items: center;
+  }
+}
+
 </style>

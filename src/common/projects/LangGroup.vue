@@ -28,7 +28,6 @@ export default defineComponent({
 .langGroup {
   margin:15px 10px;
   padding:10px;
-  max-width:350px;
   flex-grow:1;
   background:#EBEAED;
   font-weight:500;

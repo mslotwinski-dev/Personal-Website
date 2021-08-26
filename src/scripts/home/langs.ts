@@ -3,11 +3,11 @@ import { LangItem } from '../types/interfaces'
 export const softwaresFront: LangItem[] = [
   {
     Name: 'HTML',
-    Skill: 10
+    Skill: 9
   },
   {
     Name: 'CSS',
-    Skill: 9
+    Skill: 8
   },
   {
     Name: 'JavaScript',
@@ -19,7 +19,7 @@ export const softwaresFront: LangItem[] = [
   },
   {
     Name: 'Vue',
-    Skill: 5
+    Skill: 6
   },
   {
     Name: 'React',
@@ -34,7 +34,7 @@ export const softwaresFront: LangItem[] = [
 export const softwaresBack: LangItem[] = [
   {
     Name: 'NodeJS',
-    Skill: 3
+    Skill: 2
   },
   {
     Name: 'MongoDB',
@@ -42,7 +42,7 @@ export const softwaresBack: LangItem[] = [
   },
   {
     Name: 'Go',
-    Skill: 0
+    Skill: 1
   }
 ]
 

@@ -26,4 +26,10 @@ div {
   background-position:center;
   border:3px solid #045063;
 }
+
+@media (max-width:1000px) {
+  div {
+    display: none;
+  }
+}
 </style>

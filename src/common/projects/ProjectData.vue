@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class='title' v-on:click="toggleProject">
+    <div class='title'>
       {{project.Name}}
     </div>
     <div class='desc'>
@@ -21,11 +21,6 @@ import Links from './Links.vue'
 export default defineComponent({
   name: 'ProjectData',
   props: ['project'],
-  methods: {
-    toggleProject () {
-      this.$emit('toggleProject')
-    }
-  },
   components: {
     Links
   }
@@ -45,19 +40,25 @@ div {
   padding:10px;
   text-align:center;
   font-weight: 500;
-  font-size:calc(18px + 0.6vw);
+  font-size:calc(10px + 1vw);
   cursor:pointer
 }
 
 .desc {
   margin:10px;
   padding:10px;
-  font-size:20px;
+  font-size:calc(8px + 0.8vw);
   text-align: justify;
 }
 
 .created {
   font-size:20px;
+}
+
+@media (max-width:1000px) {
+  .created {
+    display:none;
+  }
 }
 
 </style>

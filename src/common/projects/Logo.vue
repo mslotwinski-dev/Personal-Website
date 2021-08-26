@@ -22,7 +22,6 @@ export default defineComponent({
 
 <style scoped>
 div {
-  width:400px;
   height:250px;
   margin:10px;
   border-radius:10px;
