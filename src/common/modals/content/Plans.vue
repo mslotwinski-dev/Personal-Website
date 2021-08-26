@@ -99,7 +99,7 @@ article {
 
 .university {
   flex-grow:1;
-  width:660px;
+  width:720px;
   max-width: 100%;
 }
 
@@ -111,17 +111,18 @@ article {
   background: #c4cbcd;
   width: 200px;
   text-align:center;
+  transition:.2s all;
 }
 
 .arrow:after, .a-both:before {
   content:'';
   display: block;
-  width:30px;
-  height:30px;
+  width:25px;
+  height:25px;
   background-image: url('../../../assets/icons/arrow.svg');
   background-size:cover;
   position: absolute;
-  top:-30px;
+  top:-27px;
   left:calc(50% - 15px);
 }
 
@@ -151,7 +152,7 @@ article {
 }
 
 .langs {
-  width:400px;
+  width:250px;
   text-align: center;
 }
 
@@ -162,6 +163,12 @@ article {
   width:200px;
   background-color:#c4cbcd;
   border-radius:5px;
+  transition:.2s all;
+}
+
+.langBlock:hover, .block:hover {
+  background-color:#cfdadd;
+  cursor:pointer;
 }
 
 @media (max-width:800px) {
