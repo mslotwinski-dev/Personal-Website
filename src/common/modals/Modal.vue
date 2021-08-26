@@ -19,6 +19,7 @@
 import { defineComponent } from 'vue'
 import Map from './content/Map.vue'
 import Image from './content/Image.vue'
+import Plans from './content/Plans.vue'
 
 export default defineComponent({
   name: 'Modal',
@@ -30,7 +31,8 @@ export default defineComponent({
   props: ['content', 'title', 'image'],
   components: {
     Map,
-    Image
+    Image,
+    Plans
   },
   data () {
     return { currentComponent: 'Error' }

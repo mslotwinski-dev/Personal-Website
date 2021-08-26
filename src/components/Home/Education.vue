@@ -2,6 +2,7 @@
     <article>
         <h1>Education</h1>
         <EducationItem :degree= 'degree' v-for="degree in degrees" :key="degree.Field" />
+        <Plans />
     </article>
 </template>
 
@@ -9,6 +10,7 @@
 import { defineComponent } from 'vue'
 
 import EducationItem from '../../common/items/EducationItem.vue'
+import Plans from '../../common/styled/Plans.vue'
 import { degrees } from '../../scripts/home/education'
 
 export default defineComponent({
@@ -18,7 +20,8 @@ export default defineComponent({
     }
   },
   components: {
-    EducationItem
+    EducationItem,
+    Plans
   }
 })
 
