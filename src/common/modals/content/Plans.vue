@@ -27,12 +27,7 @@
           </span>
         </div>
         <div class="langs">
-          <span class="langBlock">English</span>
-          <span class="langBlock">Spanish</span>
-          <span class="langBlock">German</span>
-          <span class="langBlock">Russian</span>
-          <span class="langBlock">Italian</span>
-          <span class="langBlock">Norwegian</span>
+          <span v-for="lang in langs" :key="lang" class="langBlock">{{lang}}</span>
         </div>
       </article>
       </div>
@@ -41,11 +36,15 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import { langs } from '../../../scripts/modals/plans'
 
 export default defineComponent({
   name: 'Plans',
   data () {
-    return { lockHeight: 1 }
+    return {
+      lockHeight: 1,
+      langs
+    }
   },
   created () {
     window.addEventListener('resize', this.lockAspect)
