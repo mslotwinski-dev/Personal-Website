@@ -46,6 +46,35 @@ export const softwaresBack: LangItem[] = [
   }
 ]
 
+export const softwaresOthers: string[] = [
+  'VueX',
+  'NuxtJS',
+  'VuePress',
+  'Vuetify',
+  'Gridsome',
+  'VueStorefront',
+  'Tailwind',
+  'Gatsby',
+  'ESLint',
+  'Prettier',
+  'Jest',
+  'Cypress',
+  'GraphQL',
+  'NestJS',
+  'Express',
+  'Vux',
+  'Ionic',
+  'NativeScript',
+  'Flutter',
+  'Electron',
+  'Gin',
+  'PixelGL',
+  'Unity',
+  '.NET',
+  'Git',
+  'WebAssembly'
+]
+
 export const humanLangs: LangItem[] = [
   {
     Name: 'Polish',

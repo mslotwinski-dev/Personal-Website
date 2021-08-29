@@ -57,3 +57,11 @@ export interface City {
     y: number,
     right?: number
 }
+
+export interface SchoolsPlaned {
+    Schools: {
+        Name: string,
+        Age: number,
+        Classes?: string
+    }[][]
+}

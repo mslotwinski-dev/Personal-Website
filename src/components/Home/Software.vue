@@ -9,6 +9,10 @@
         <ul>
             <ListItem imgFolder= 'backend-langs' :item= 'item' v-for="item in softwaresBack" :key="item.Name" />
         </ul>
+        <h2>Others and still learning :></h2>
+        <div class="others">
+          <OtherSkills :item="item" v-for="item in softwaresOthers" :key="item"/>
+        </div>
     </article>
 </template>
 
@@ -16,17 +20,20 @@
 import { defineComponent } from 'vue'
 
 import ListItem from '../../common/items/ListItem.vue'
-import { softwaresFront, softwaresBack } from '../../scripts/home/langs'
+import OtherSkills from '../../common/items/OtherSkills.vue'
+import { softwaresFront, softwaresBack, softwaresOthers } from '../../scripts/home/langs'
 
 export default defineComponent({
   data () {
     return {
       softwaresFront,
-      softwaresBack
+      softwaresBack,
+      softwaresOthers
     }
   },
   components: {
-    ListItem
+    ListItem,
+    OtherSkills
   }
 })
 
@@ -48,6 +55,20 @@ ul {
   font-weight:500;
   list-style-type: none;
   padding:0;
+}
+
+.others {
+  font-size:calc(8px + 0.8vw);
+  font-weight: 500;
+  max-width:80vw;
+  width:900px;
+  margin:10px auto;
+  background-color:#ccd1d350;
+  border-radius:10px;
+  padding:5px;
+  display:flex;
+  justify-content: space-between;
+  flex-wrap:wrap;
 }
 
 </style>

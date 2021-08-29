@@ -8,27 +8,8 @@
          My plans assume learning and studying:
       </div>
       <article>
-        <div class=university>
-          <span class="level"><span class="block">Economics</span></span>
-          <span class="level"><span class="block arrow">Mathematics</span></span>
-          <span class="level">
-            <span class="block arrow a-left">Physics</span>
-            <span class="block arrow a-right">IT</span>
-          </span>
-          <span class="level">
-            <span class="block arrow a-left">Biophysics</span>
-            <span class="block arrow a-both">Electronics</span>
-            <span class="block arrow a-right">Econometrics</span>
-          </span>
-          <span class="level">
-            <span class="block arrow">Biology</span>
-            <span class="block null"></span>
-            <span class="block null"></span>
-          </span>
-        </div>
-        <div class="langs">
-          <span v-for="lang in langs" :key="lang" class="langBlock">{{lang}}</span>
-        </div>
+        <PlansEducation/>
+        <PlansLang/>
       </article>
       </div>
    </div>
@@ -36,14 +17,18 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { langs } from '../../../scripts/modals/plans'
+import PlansLang from './PlansLang.vue'
+import PlansEducation from './PlansEducation.vue'
 
 export default defineComponent({
   name: 'Plans',
+  components: {
+    PlansLang,
+    PlansEducation
+  },
   data () {
     return {
-      lockHeight: 1,
-      langs
+      lockHeight: 1
     }
   },
   created () {
@@ -59,7 +44,8 @@ export default defineComponent({
     },
     lockAspect () {
       setTimeout(() => {
-        const map: any = document.querySelector('.content')!
+        // eslint-disable-next-line
+        const map: any = document.querySelector('.content')
         this.lockHeight = map.offsetWidth / 1.777
       }, 1)
     }
@@ -94,95 +80,6 @@ article {
   display: flex;
   flex-wrap:wrap;
   justify-content: center;
-}
-
-.university {
-  flex-grow:1;
-  width:720px;
-  max-width: 100%;
-}
-
-.block {
-  display:inline-block;
-  margin:10px;
-  padding:10px;
-  border-radius:5px;
-  background: #c4cbcd;
-  width: 200px;
-  text-align:center;
-  transition:.2s all;
-}
-
-.arrow:after, .a-both:before {
-  content:'';
-  display: block;
-  width:25px;
-  height:25px;
-  background-image: url('../../../assets/icons/arrow.svg');
-  background-size:cover;
-  position: absolute;
-  top:-27px;
-  left:calc(50% - 15px);
-}
-
-.a-left:after, .a-both:after {
-  transform:rotate(45deg) scaleX(-1);
-  left:calc(75% - 15px);
-}
-
-.a-right:after, .a-both:before {
-  transform:rotate(-45deg);
-  left:calc(25% - 15px);
-}
-
-.null {
-  background: none;
-  margin:0 10px;
-}
-
-.null:after {
-  display: none;
-}
-
-.level {
-  display: block;
-  text-align:center;
-  margin-bottom:10px;
-}
-
-.langs {
-  width:250px;
-  text-align: center;
-}
-
-.langBlock {
-  display:block;
-  margin:10px;
-  padding:10px;
-  width:200px;
-  background-color:#c4cbcd;
-  border-radius:5px;
-  transition:.2s all;
-}
-
-.langBlock:hover, .block:hover {
-  background-color:#cfdadd;
-  cursor:pointer;
-}
-
-@media (max-width:800px) {
-  .null {
-    display: none;
-  }
-  .block:after, .block:before {
-    display:none;
-  }
-  .level {
-    margin-bottom:0;
-  }
-  .container {
-    overflow-Y: scroll;
-  }
 }
 
 </style>
