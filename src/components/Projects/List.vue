@@ -1,8 +1,8 @@
 <template>
   <article>
-    <header>
+    <h1>
         Summary
-    </header>
+    </h1>
     <ul>
       <li v-for="project in projects" :key="project">
         {{project.Name}}
@@ -45,17 +45,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
-  header {
-    text-align:center;
-    font-weight: 500;
-    font-size:calc(10px + 1vw);
-    padding-bottom:10px;
-    border-bottom:5px solid #b2bec2;
-    width:800px;
-    max-width:90vw;
-    margin:auto;
-  }
 
 article {
   margin:20px 0;

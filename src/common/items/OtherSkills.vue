@@ -1,7 +1,7 @@
 <template>
   <div>
-    <img v-if="item != '.NET'" :src="getImgUrl(item.toLowerCase())">
-    <img v-if="item == '.NET'" :src="getImgUrl('dotnet')">
+    <img v-if="item != 'ASP .NET'" :src="getImgUrl(item.toLowerCase())">
+    <img v-if="item == 'ASP .NET'" :src="getImgUrl('dotnet')">
     {{item}}
   </div>
 </template>

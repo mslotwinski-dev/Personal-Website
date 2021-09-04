@@ -6,6 +6,16 @@
   </router-view>
 </template>
 
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  mounted () {
+    document.title = 'Mateusz Słotwiński'
+  }
+})
+</script>
+
 <style>
 
 /* Animations */

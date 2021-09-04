@@ -22,6 +22,10 @@ export interface LangItem {
     Native?: boolean // Only in human langs
 }
 
+export interface Frameworks {
+    [key:string]: LangItem[]
+}
+
 export interface Interest {
     Name:string,
     Link?:string

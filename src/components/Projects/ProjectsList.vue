@@ -1,8 +1,8 @@
 <template>
   <article>
-    <header>
+    <h1>
         {{type}}
-    </header>
+    </h1>
     <div>
         <SingleProject :project= 'project' v-for="project in ThisCategory" :key="project"/>
     </div>
@@ -32,17 +32,6 @@ export default defineComponent({
 </script>
 
 <style scoped>
-
-  header {
-    text-align:center;
-    font-weight: 500;
-    font-size:calc(10px + 1vw);
-    padding-bottom:10px;
-    border-bottom:5px solid #b2bec2;
-    width:800px;
-    max-width:90vw;
-    margin:auto;
-  }
 
 div {
   width:1200px;

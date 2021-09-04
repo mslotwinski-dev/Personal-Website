@@ -1,11 +1,11 @@
 <template>
   <article>
-    <h1>Projects</h1>
+    <h1>{{link.charAt(0).toUpperCase() + link.toLowerCase().slice(1)}}</h1>
     <section>
       <p>
-        Click here to check my projects!
+        Click here to check my {{link}}!
       </p>
-      <router-link to="/projects">
+      <router-link :to="'/' + link">
         <LinkButton icon="projects.png"/>
       </router-link>
     </section>
@@ -15,9 +15,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 
-import LinkButton from '../../common/styled/LinkButton.vue'
+import LinkButton from './LinkButton.vue'
 
 export default defineComponent({
+  props: ['link'],
   components: {
     LinkButton
   }
