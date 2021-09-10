@@ -11,6 +11,12 @@
         <span :style="{'width': item.Skill*10 + '%'}" :class="{nativeColor: item.Native}" ></span>
     </span>
   </li>
+  <ul class="details" v-if="item.Details && showDetails == true">
+      <li v-for="details in item.Details" :key="details">
+        <img :src="getImgUrl('other-langs', details.toLowerCase())" />
+        {{details}}
+      </li>
+  </ul>
 </template>
 
 <script lang="ts">
@@ -20,10 +26,14 @@ export default defineComponent({
   methods: {
     getImgUrl (folder:string, pic: string) {
       return require('../../assets/thumbnails/' + folder + '/' + pic + '.png')
+    },
+    toogleDetails () {
+      this.showDetails = !this.showDetails
     }
   },
   data () {
     return {
+      showDetails: false
     }
   },
   props: ['item', 'imgFolder']

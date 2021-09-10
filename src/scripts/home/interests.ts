@@ -32,14 +32,14 @@ export const interests: Interest[] = [
     Name: 'Psychology'
   },
   {
-    Name: 'Psychiatry'
-  },
-  {
     Name: 'Neurology',
     Link: 'Neuroscience'
   },
   {
     Name: 'Biology'
+  },
+  {
+    Name: 'Biophysics'
   },
   {
     Name: 'Zoology'

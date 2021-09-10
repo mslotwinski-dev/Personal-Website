@@ -1,8 +1,8 @@
 <template>
   <div>
-    <img v-if="item != 'ASP .NET'" :src="getImgUrl(item.toLowerCase())">
+    <img v-if="item != 'ASP .NET'" :src="getImgUrl(item.Name.toLowerCase())">
     <img v-if="item == 'ASP .NET'" :src="getImgUrl('dotnet')">
-    {{item}}
+    {{item.Name}}
   </div>
 </template>
 
@@ -24,9 +24,8 @@ export default defineComponent({
 div {
     padding:calc(2px + 0.2vw) calc(3px + 0.5vw);
     border-radius:10px;
-    margin:10px;
+    margin:calc(5px + 0.5vw);
     background: #ccd1d399;
-    flex-grow:1;
     display: flex;
     justify-content:center;
     align-items: center;

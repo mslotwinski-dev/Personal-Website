@@ -20,6 +20,7 @@ export interface LangItem {
     Name: string,
     Skill: number
     Native?: boolean // Only in human langs
+    Details?: string[]
 }
 
 export interface Frameworks {

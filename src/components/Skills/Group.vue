@@ -1,18 +1,18 @@
 <template>
     <h2>{{group}}</h2>
     <ul>
-      <ListItemSmall :item= 'item' v-for="item in type[group]" :key="item.Name" />
+      <ListItem :item= 'item' v-for="item in type[group]" :key="item.Name" imgFolder="programming-langs"/>
     </ul>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import ListItemSmall from '../../common/items/ListItemSmall.vue'
+import ListItem from '../../common/items/ListItem.vue'
 
 export default defineComponent({
   props: ['name', 'group', 'type'],
   components: {
-    ListItemSmall
+    ListItem
   }
 })
 </script>

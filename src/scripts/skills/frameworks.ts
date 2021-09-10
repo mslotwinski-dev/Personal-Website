@@ -2,67 +2,99 @@ import { Frameworks } from '../types/interfaces'
 
 // Skill 1-4
 
-export const front:Frameworks = {
-  Generating: [
+export const general:Frameworks = {
+  Frontend: [
     {
-      Name: 'NuxtJS',
+      Name: 'HTML',
+      Skill: 9
+    },
+    {
+      Name: 'CSS',
+      Skill: 8
+    },
+    {
+      Name: 'JavaScript',
+      Skill: 7.5
+    },
+    {
+      Name: 'TypeScript',
+      Skill: 7
+    },
+    {
+      Name: 'Vue',
+      Skill: 6,
+      Details: [
+        'VueX',
+        'VueRouter',
+        'Vuetify',
+        'NuxtJS'
+      ]
+    },
+    {
+      Name: 'React',
+      Skill: 2,
+      Details: [
+        'Gatsby'
+      ]
+    },
+    {
+      Name: 'Angular',
+      Skill: 0
+    }],
+  Backend: [
+    {
+      Name: 'NodeJS',
+      Skill: 4,
+      Details: [
+        'Express',
+        'NestJS'
+      ]
+    },
+    {
+      Name: 'Go',
+      Skill: 2.5
+    },
+    {
+      Name: 'Dart',
       Skill: 1
     },
     {
-      Name: 'VuePress',
-      Skill: 1
+      Name: 'Python',
+      Skill: 0.0001
     },
     {
-      Name: 'Gridsome',
-      Skill: 1
+      Name: 'C#',
+      Skill: 0
     },
     {
-      Name: 'Gatsby',
-      Skill: 1
+      Name: 'Java',
+      Skill: 0
+    },
+    {
+      Name: 'Ruby',
+      Skill: 0
     }
   ],
-  Storage: [
+  Databases: [
     {
-      Name: 'VueX',
-      Skill: 1
+      Name: 'MongoDB',
+      Skill: 3
     }
   ],
-  Styling: [
+  Others: [
     {
-      Name: 'Vuetify',
-      Skill: 1
+      Name: 'GraphQL',
+      Skill: 0
     },
     {
-      Name: 'Tailwind',
-      Skill: 1
-    },
-    {
-      Name: 'MaterialUI',
-      Skill: 1
+      Name: 'WebAssembly',
+      Skill: 0
     }
   ]
 }
 
-export const back:Frameworks = {
-  API: [
-    {
-      Name: 'Express',
-      Skill: 2
-    },
-    {
-      Name: 'NestJS',
-      Skill: 1
-    },
-    {
-      Name: 'Gin',
-      Skill: 2
-    },
-    {
-      Name: 'FastAPI',
-      Skill: 1
-    }
-  ],
-  Testing: [
+export const front:Frameworks = {
+  'Testing & Linting': [
     {
       Name: 'ESLint',
       Skill: 1
@@ -79,6 +111,92 @@ export const back:Frameworks = {
       Name: 'Cypress',
       Skill: 1
     }
+  ],
+  JavaScript: [
+    {
+      Name: 'Electron',
+      Skill: 1
+    }
+  ],
+  Vue: [
+    {
+      Name: 'VueRouter',
+      Skill: 1
+    },
+    {
+      Name: 'VueX',
+      Skill: 1
+    },
+    {
+      Name: 'Vuetify',
+      Skill: 1
+    }
+  ],
+  NodeJS: [
+    {
+      Name: 'Express',
+      Skill: 1
+    },
+    {
+      Name: 'NestJS',
+      Skill: 1
+    },
+    {
+      Name: 'EmailJS',
+      Skill: 1
+    }
+  ],
+  Go: [
+    {
+      Name: 'Gin',
+      Skill: 1
+    },
+    {
+      Name: 'PixelGL',
+      Skill: 1
+    }
+  ],
+  Dart: [
+    {
+      Name: 'Flutter',
+      Skill: 1
+    }
+  ],
+  Python: [
+    {
+      Name: 'Django',
+      Skill: 1
+    },
+    {
+      Name: 'FastAPI',
+      Skill: 1
+    }
+  ],
+  CSharp: [
+    {
+      Name: 'DotNET',
+      Skill: 1
+    },
+    {
+      Name: 'Unity',
+      Skill: 1
+    }
+  ]
+}
+
+export const back:Frameworks = {
+  API: [
+    {
+      Name: 'Gin',
+      Skill: 2
+    },
+    {
+      Name: 'FastAPI',
+      Skill: 1
+    }
+  ],
+  Testing: [
+
   ],
   Others: [
     {

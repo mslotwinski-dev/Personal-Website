@@ -1,29 +1,16 @@
 <template>
     <article>
 
-    <h1>Programming Languages</h1>
-    <ul>
-        <ListItem imgFolder= 'programming-langs' :item= 'item' v-for="item in programmingLangs" :key="item.Name" />
-    </ul>
+    <h1>Programming</h1>
+    <Group v-for="group in Object.keys(general)" :key="group" :group="group" :type="general"/>
 
-    <h1>Web Frontend</h1>
-    <Group v-for="group in Object.keys(front)" :key="group" :group="group" :type="front"/>
-
-    <h1>Web Backend</h1>
-    <Group v-for="group in Object.keys(back)" :key="group" :group="group" :type="back"/>
-
-    <h1>Apps</h1>
-    <Group v-for="group in Object.keys(apps)" :key="group" :group="group" :type="apps"/>
+    <h1>Frameworks</h1>
+    <Minor v-for="group in Object.keys(front)" :key="group" :group="group" :type="front"/>
 
     <h1>Human Languages</h1>
     <ul>
       <ListItem imgFolder= 'human-langs' :item= 'item' v-for="item in human" :key="item.Name" />
     </ul>
-
-    <h1>Others and still learning :></h1>
-    <div class="others">
-      <OtherSkills :item="item" v-for="item in softwaresOthers" :key="item"/>
-    </div>
 
   </article>
 </template>
@@ -31,16 +18,16 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Group from './Group.vue'
+import Minor from './Minor.vue'
 import ListItem from '../../common/items/ListItem.vue'
-import OtherSkills from '../../common/items/OtherSkills.vue'
-import { programmingLangs, softwaresOthers, human } from '../../scripts/skills/langs'
-import { front, back, apps } from '../../scripts/skills/frameworks'
+import { softwaresOthers, human } from '../../scripts/skills/langs'
+import { general, front, back, apps } from '../../scripts/skills/frameworks'
 
 export default defineComponent({
   name: 'Projects',
   data () {
     return {
-      programmingLangs,
+      general,
       softwaresOthers,
       human,
       front,
@@ -50,8 +37,9 @@ export default defineComponent({
   },
   components: {
     ListItem,
-    OtherSkills,
-    Group
+    // OtherSkills,
+    Group,
+    Minor
   }
 })
 </script>
