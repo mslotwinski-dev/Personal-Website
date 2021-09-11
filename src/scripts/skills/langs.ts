@@ -194,9 +194,5 @@ export const human: LangItem[] = [
   {
     Name: 'German',
     Skill: 3
-  },
-  {
-    Name: 'Russian',
-    Skill: 0
   }
 ]

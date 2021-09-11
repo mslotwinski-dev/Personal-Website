@@ -56,7 +56,8 @@ p {
 }
 
 .hidedumb {
-  padding:10px;
+  padding:calc(6px + 0.3vw);
+  font-size:calc(8px + 0.8vw);
   background:#00647d;
   border-radius:10px;
   color:#e3e3e3;
