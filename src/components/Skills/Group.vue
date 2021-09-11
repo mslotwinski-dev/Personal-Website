@@ -1,18 +1,29 @@
 <template>
     <h2>{{group}}</h2>
     <ul>
-      <ListItem :item= 'item' v-for="item in type[group]" :key="item.Name" imgFolder="programming-langs"/>
+      <ListItem :item= 'item' v-for="item in sortedArray" :key="item.Name" imgFolder="programming-langs"/>
     </ul>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import ListItem from '../../common/items/ListItem.vue'
+import { LangItem } from '../../scripts/types/interfaces'
 
 export default defineComponent({
   props: ['name', 'group', 'type'],
   components: {
     ListItem
+  },
+  data () {
+    return {
+      sortedArray: []
+    }
+  },
+  mounted () {
+    const array = this.type[this.group]
+    array.sort((a: LangItem, b:LangItem) => b.Skill - a.Skill)
+    this.sortedArray = array
   }
 })
 </script>

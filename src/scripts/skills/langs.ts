@@ -45,7 +45,11 @@ export const general:Frameworks = {
     },
     {
       Name: 'Python',
-      Skill: 0.25
+      Skill: 0
+    },
+    {
+      Name: 'C++',
+      Skill: 0
     },
     {
       Name: 'C#',
@@ -61,6 +65,14 @@ export const general:Frameworks = {
     }
   ],
   Databases: [
+    {
+      Name: 'MySQL',
+      Skill: 0
+    },
+    {
+      Name: 'PostgreSQL',
+      Skill: 0
+    },
     {
       Name: 'MongoDB',
       Skill: 3
@@ -157,10 +169,10 @@ export const frameworks:Frameworks = {
       Skill: 0
     }
   ],
-  CSharp: [
+  'C#': [
     {
       Name: 'ASP .NET',
-      Skill: 1
+      Skill: 0
     },
     {
       Name: 'Unity',
@@ -182,5 +194,9 @@ export const human: LangItem[] = [
   {
     Name: 'German',
     Skill: 3
+  },
+  {
+    Name: 'Russian',
+    Skill: 0
   }
 ]

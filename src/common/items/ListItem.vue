@@ -1,5 +1,5 @@
 <template>
-  <li :class="{dumb: item.Skill == 0}" v-on:click="toogleDetails">
+  <li :class="{dumb: item.Skill == 0, imSoDumb: item.Skill == 0 && amIdumb == 'no'}" v-on:click="toogleDetails">
     <div class='codeName'>
         <img :src="getImgUrl(imgFolder, item.Name.toLowerCase())" />
         {{item.Name}}
@@ -24,6 +24,7 @@ export default defineComponent({
   },
   data () {
     return {
+      amIdumb: localStorage.getItem('showDumb')
     }
   },
   props: ['item', 'imgFolder']

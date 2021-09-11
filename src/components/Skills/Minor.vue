@@ -1,14 +1,16 @@
 <template>
     <h2></h2>
-    <div class="others">
+    <div class="others" :class="{dumb: dumb, imSoDumb: dumb && amIdumb == 'no'}">
       <div class="group">{{group}}</div>
-      <OtherSkills :item= 'item' v-for="item in sortedProp" :key="item.Name" />
+      <OtherSkills :item= 'item' v-for="item in sortedArray" :key="item.Name" />
     </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import OtherSkills from '../../common/items/OtherSkills.vue'
+import { general } from '../../scripts/skills/langs'
+import { LangItem } from '../../scripts/types/interfaces'
 
 export default defineComponent({
   props: ['name', 'group', 'type'],
@@ -17,16 +19,26 @@ export default defineComponent({
   },
   data () {
     return {
-      sortedProp: []
+      sortedArray: [],
+      general,
+      dumb: false,
+      amIdumb: localStorage.getItem('showDumb')
     }
   },
   mounted () {
     const array = this.type[this.group]
-    // eslint-disable-next-line
-    array.sort((a: any, b:any) => parseFloat(b.Skill) - parseFloat(a.Skill))
-    this.sortedProp = array
+    array.sort((a: LangItem, b:LangItem) => b.Skill - a.Skill)
+    this.sortedArray = array
+
+    const thisLang = (Object.values(this.general)).flat(1).find(element => element.Name === this.group)
+    const thisLenght = this.type[this.group].filter((element: { Skill: number }) => element.Skill > 0).length
+
+    if ((thisLang && thisLang.Skill === 0) || thisLenght === 0) {
+      this.dumb = true
+    }
   }
 })
+
 </script>
 
 <style scoped>
@@ -69,6 +81,10 @@ ul {
   position: absolute;
   top:30%;
   left:-500px;
+}
+
+.dumb .group {
+  color: #2626365f
 }
 
 @media (max-width:1200px) {

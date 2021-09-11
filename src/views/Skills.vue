@@ -1,7 +1,7 @@
 <template>
   <main>
-    <BackButton />
-    <Skills/>
+    <BackButton @clicked="hideDumb"/>
+    <Skills :key="componentKey" ref="skills"/>
   </main>
 </template>
 
@@ -14,10 +14,30 @@ export default defineComponent({
   components: {
     BackButton,
     Skills
+  },
+  methods: {
+    hideDumb () {
+      const a = localStorage.getItem('showDumb')
+      if (a === 'no') {
+        localStorage.setItem('showDumb', 'yes')
+      } else {
+        localStorage.setItem('showDumb', 'no')
+      }
+      this.componentKey += 1
+    }
+  },
+  data () {
+    return {
+      componentKey: 0
+    }
   }
 })
 </script>
 
-<style scoped>
+<style>
+
+.imSoDumb {
+  display:none !important;
+}
 
 </style>

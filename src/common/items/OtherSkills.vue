@@ -1,5 +1,5 @@
 <template>
-  <div :class="{dumb: item.Skill == 0}">
+  <div :class="{dumb: item.Skill == 0, imSoDumb: item.Skill == 0 && amIdumb == 'no'}">
     <img v-if="item.Name != 'ASP .NET'" :src="getImgUrl(item.Name.toLowerCase())">
     <img v-if="item.Name == 'ASP .NET'" :src="getImgUrl('dotnet')">
     {{item.Name}}
@@ -8,14 +8,18 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-
 export default defineComponent({
   methods: {
     getImgUrl (pic: string) {
       return require('../../assets/thumbnails/other-langs/' + pic + '.png')
     }
   },
-  props: ['item']
+  props: ['item'],
+  data () {
+    return {
+      amIdumb: localStorage.getItem('showDumb')
+    }
+  }
 })
 </script>
 

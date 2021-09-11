@@ -1,11 +1,14 @@
 <template>
   <nav>
-    <router-link to="/">
+    <div>
+      <router-link to="/">
       <LinkButton icon="projects.png" class="rotate"/>
-    </router-link>
-    <p>
-        Back to my CV
-    </p>
+      </router-link>
+      <p>
+          Back to my CV
+      </p>
+    </div>
+    <span v-on:click="emit" class="hidedumb" v-if="$route.name === 'Skills'">Hide unlearned</span>
   </nav>
 </template>
 
@@ -17,6 +20,11 @@ export default defineComponent({
   name: 'BackButton',
   components: {
     LinkButton
+  },
+  methods: {
+    emit () {
+      this.$emit('clicked')
+    }
   }
 })
 </script>
@@ -27,8 +35,14 @@ nav {
     margin:10px;
     display:flex;
     align-items:center;
+    justify-content: space-evenly;
     width:800px;
     max-width:100vw;
+}
+
+nav div {
+  display:flex;
+  align-items:center;
 }
 
 .rotate {
@@ -39,6 +53,14 @@ p {
     margin:0 10px;
     font-weight: 500;
     font-size:calc(8px + 0.8vw)
+}
+
+.hidedumb {
+  padding:10px;
+  background:#00647d;
+  border-radius:10px;
+  color:#e3e3e3;
+  cursor:pointer;
 }
 
 </style>
