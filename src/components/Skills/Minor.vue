@@ -2,7 +2,7 @@
     <h2></h2>
     <div class="others">
       <div class="group">{{group}}</div>
-      <OtherSkills :item= 'item' v-for="item in type[group]" :key="item.Name" />
+      <OtherSkills :item= 'item' v-for="item in sortedProp" :key="item.Name" />
     </div>
 </template>
 
@@ -14,6 +14,17 @@ export default defineComponent({
   props: ['name', 'group', 'type'],
   components: {
     OtherSkills
+  },
+  data () {
+    return {
+      sortedProp: []
+    }
+  },
+  mounted () {
+    const array = this.type[this.group]
+    // eslint-disable-next-line
+    array.sort((a: any, b:any) => parseFloat(b.Skill) - parseFloat(a.Skill))
+    this.sortedProp = array
   }
 })
 </script>

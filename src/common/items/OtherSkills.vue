@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <img v-if="item != 'ASP .NET'" :src="getImgUrl(item.Name.toLowerCase())">
-    <img v-if="item == 'ASP .NET'" :src="getImgUrl('dotnet')">
+  <div :class="{dumb: item.Skill == 0}">
+    <img v-if="item.Name != 'ASP .NET'" :src="getImgUrl(item.Name.toLowerCase())">
+    <img v-if="item.Name == 'ASP .NET'" :src="getImgUrl('dotnet')">
     {{item.Name}}
   </div>
 </template>
@@ -44,6 +44,10 @@ img {
   margin:0 10px;
   filter: brightness(0.8);
   border-radius:15%;
+}
+
+.dumb {
+  opacity:.35;
 }
 
 </style>

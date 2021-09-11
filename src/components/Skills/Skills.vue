@@ -5,7 +5,7 @@
     <Group v-for="group in Object.keys(general)" :key="group" :group="group" :type="general"/>
 
     <h1>Frameworks</h1>
-    <Minor v-for="group in Object.keys(front)" :key="group" :group="group" :type="front"/>
+    <Minor v-for="group in Object.keys(frameworks)" :key="group" :group="group" :type="frameworks"/>
 
     <h1>Human Languages</h1>
     <ul>
@@ -20,19 +20,15 @@ import { defineComponent } from 'vue'
 import Group from './Group.vue'
 import Minor from './Minor.vue'
 import ListItem from '../../common/items/ListItem.vue'
-import { softwaresOthers, human } from '../../scripts/skills/langs'
-import { general, front, back, apps } from '../../scripts/skills/frameworks'
+import { general, frameworks, human } from '../../scripts/skills/langs'
 
 export default defineComponent({
   name: 'Projects',
   data () {
     return {
       general,
-      softwaresOthers,
-      human,
-      front,
-      back,
-      apps
+      frameworks,
+      human
     }
   },
   components: {
