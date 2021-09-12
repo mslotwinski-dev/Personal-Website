@@ -1,7 +1,7 @@
 <template>
   <div>
     <span v-for="level in education.Schools" :key="level" class="level">
-      <span :key="field" v-for="field in level" class="block" :class="field.Classes">{{field.Name}}</span>
+      <span v-for="field in level" :key="field" class="block" :class="field.Classes">{{field.Name}}</span>
     </span>
   </div>
 </template>
@@ -22,7 +22,6 @@ export default defineComponent({
 <style scoped>
 
 div {
-  flex-grow:1;
   width:720px;
   max-width: 100%;
 }
@@ -61,7 +60,8 @@ div {
 }
 
 .null {
-  background: none;
+  background: none !important;
+  cursor:default !important;
   margin:0 10px;
 }
 
@@ -71,13 +71,28 @@ div {
 
 .level {
   display: block;
-  text-align:center;
+  text-align:right;
   margin-bottom:10px;
+}
+
+.half {
+  width: 100px;
+  margin: 5px;
 }
 
 .block:hover {
   background-color:#cfdadd;
   cursor:pointer;
+}
+
+.big {
+  padding:12px 10px;
+  top:-2px;
+  font-size:78.15%;
+}
+
+.maybe {
+  opacity:.6;
 }
 
 @media (max-width:800px) {

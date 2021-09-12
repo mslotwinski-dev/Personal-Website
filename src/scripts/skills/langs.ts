@@ -111,8 +111,12 @@ export const frameworks:Frameworks = {
   ],
   JavaScript: [
     {
-      Name: 'Electron',
+      Name: 'Axios',
       Skill: 1
+    },
+    {
+      Name: 'Electron',
+      Skill: 0
     }
   ],
   Vue: [

@@ -213,5 +213,40 @@ export const projects: Project[] = [
       }
     ],
     Screenshots: []
+  },
+  {
+    Name: 'Cloudy',
+    Desc: 'Simple file storage app',
+    Category: 'Personal',
+    Link: {
+      Content: 'cloudy',
+      Absolute: false
+    },
+    Code: 'Mateusz-Slotwinski/Cloudy',
+    Created: 'VI 2020',
+    Logo: 'cloudy.png',
+    Langs: [
+      {
+        Id: LangID[7],
+        Percentage: 50
+      },
+      {
+        Id: LangID[6],
+        Percentage: 20
+      },
+      {
+        Id: LangID[11],
+        Percentage: 25
+      },
+      {
+        Id: LangID[3],
+        Percentage: 4
+      },
+      {
+        Id: LangID[0],
+        Percentage: 1
+      }
+    ],
+    Screenshots: []
   }
 ]

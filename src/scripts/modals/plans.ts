@@ -15,13 +15,23 @@ export const education:SchoolsPlaned = {
       {
         Name: 'Economics',
         Age: 28
+      },
+      {
+        Name: '',
+        Age: 0,
+        Classes: 'null half'
       }
     ],
     [
       {
         Name: 'Mathematics',
         Age: 26,
-        Classes: 'arrow'
+        Classes: 'arrow a-left'
+      },
+      {
+        Name: 'Governance',
+        Age: 44,
+        Classes: 'arrow a-right'
       }
     ],
     [
@@ -31,15 +41,20 @@ export const education:SchoolsPlaned = {
         Classes: 'arrow a-left'
       },
       {
-        Name: 'IT',
+        Name: 'Informatics',
         Age: 37,
         Classes: 'arrow a-right'
+      },
+      {
+        Name: '',
+        Age: 0,
+        Classes: 'null half'
       }
     ],
     [
       {
         Name: 'Biophysics',
-        Age: 47,
+        Age: 50,
         Classes: 'arrow a-left'
       },
       {
@@ -48,21 +63,16 @@ export const education:SchoolsPlaned = {
         Classes: 'arrow a-both'
       },
       {
-        Name: 'Econometrics',
-        Age: 44,
-        Classes: 'arrow a-right'
+        Name: '',
+        Age: 0,
+        Classes: 'null'
       }
     ],
     [
       {
-        Name: 'Biology',
-        Age: 50,
-        Classes: 'arrow'
-      },
-      {
-        Name: '',
+        Name: 'Quantum engineering',
         Age: 0,
-        Classes: 'null'
+        Classes: 'arrow big'
       },
       {
         Name: '',
