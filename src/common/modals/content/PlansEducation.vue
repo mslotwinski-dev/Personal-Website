@@ -1,5 +1,6 @@
 <template>
   <div>
+    <span class="title">Sciences</span>
     <span v-for="level in education.Schools" :key="level" class="level">
       <span v-for="field in level" :key="field" class="block" :class="field.Classes">{{field.Name}}</span>
     </span>
@@ -26,12 +27,20 @@ div {
   max-width: 100%;
 }
 
+.title {
+  display: block;
+  text-align: center;
+  font-size:calc(1vw + 10px);
+}
+
 .block {
   display:inline-block;
   margin:10px;
   padding:10px;
   border-radius:5px;
   background: #c4cbcd;
+  color:#00647d;
+  text-shadow: 0 0 6px #00647d40, 0 0 10px #00647d40;
   width: 200px;
   text-align:center;
   transition:.2s all;
@@ -85,10 +94,16 @@ div {
   cursor:pointer;
 }
 
+@media (min-width: 800px) {
 .big {
   padding:12px 10px;
   top:-2px;
   font-size:78.15%;
+  }
+
+.title {
+  display: none;
+}
 }
 
 .maybe {
@@ -102,8 +117,12 @@ div {
   .block:after, .block:before {
     display:none;
   }
+  .block {
+    margin:4px;
+  }
   .level {
     margin-bottom:0;
+    text-align: center;
   }
 }
 </style>

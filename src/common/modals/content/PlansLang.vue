@@ -1,6 +1,7 @@
 <template>
     <div>
-        <span class="langBlock" v-for="lang in langs" :key="lang">{{lang}}</span>
+      <span class="title">Languages</span>
+      <span class="langBlock" v-for="lang in langs" :key="lang">{{lang}}</span>
     </div>
 </template>
 
@@ -23,21 +24,44 @@ export default defineComponent({
 
 div {
   width:250px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-span {
+.title {
+  display: block;
+  text-align: center;
+  font-size:calc(1vw + 10px);
+}
+
+.langBlock {
   display:block;
+  text-align: center;
   margin:10px;
   padding:10px;
   width:200px;
   background-color:#c4cbcd;
+  color: #6D455E;
+  text-shadow: 0 0 6px #6D455E40, 0 0 10px #6D455E40;
   border-radius:5px;
   transition:.2s all;
 }
 
-span:hover {
+.langBlock:hover {
   background-color:#cfdadd;
   cursor:pointer;
+}
+
+@media (min-width: 800px) {
+.title {
+  display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .langBlock {
+    margin:4px;
+  }
 }
 </style>
