@@ -1,202 +1,231 @@
 import { LangItem, Frameworks } from '../types/interfaces'
 
-export const general:Frameworks = {
-  Frontend: [
-    {
-      Name: 'HTML',
-      Skill: 9
-    },
-    {
-      Name: 'CSS',
-      Skill: 8
-    },
+export const general: Frameworks = {
+  Languages: [
     {
       Name: 'JavaScript',
-      Skill: 7.5
+      Skill: 8,
     },
     {
       Name: 'TypeScript',
-      Skill: 7
-    },
-    {
-      Name: 'Vue',
-      Skill: 6
-    },
-    {
-      Name: 'React',
-      Skill: 2
-    },
-    {
-      Name: 'Angular',
-      Skill: 0
-    }],
-  Backend: [
-    {
-      Name: 'NodeJS',
-      Skill: 4
+      Skill: 7.5,
     },
     {
       Name: 'Go',
-      Skill: 2.5
-    },
-    {
-      Name: 'Dart',
-      Skill: 1
-    },
-    {
-      Name: 'Python',
-      Skill: 0
+      Skill: 5,
     },
     {
       Name: 'C++',
-      Skill: 0
+      Skill: 3,
     },
     {
       Name: 'C#',
-      Skill: 0
+      Skill: 2,
     },
     {
-      Name: 'Java',
-      Skill: 0
+      Name: 'Dart',
+      Skill: 2,
     },
     {
-      Name: 'Ruby',
-      Skill: 0
-    }
+      Name: 'Elixir',
+      Skill: 1,
+    },
+    {
+      Name: 'Python',
+      Skill: 0.5,
+    },
+  ],
+  Frontend: [
+    {
+      Name: 'Vue',
+      Skill: 9,
+    },
+    {
+      Name: 'React',
+      Skill: 3,
+    },
+    {
+      Name: 'Angular',
+      Skill: 1,
+    },
+  ],
+  Backend: [
+    {
+      Name: 'NodeJS',
+      Skill: 6,
+    },
+    {
+      Name: 'Express',
+      Skill: 5,
+    },
+    {
+      Name: 'Gin',
+      Skill: 4,
+    },
+    {
+      Name: 'NestJS',
+      Skill: 2.5,
+    },
+    {
+      Name: 'FastAPI',
+      Skill: 1,
+    },
+    {
+      Name: 'ASP .NET',
+      Skill: 3,
+    },
+    {
+      Name: 'GraphQL',
+      Skill: 0.5,
+    },
+    {
+      Name: 'Phoenix',
+      Skill: 0,
+    },
+  ],
+  Mobile: [
+    {
+      Name: 'Flutter',
+      Skill: 3,
+    },
+    {
+      Name: 'Swift',
+      Skill: 0,
+    },
+  ],
+  Desktop: [
+    {
+      Name: 'Electron',
+      Skill: 2,
+    },
   ],
   Databases: [
     {
       Name: 'MySQL',
-      Skill: 0
+      Skill: 0,
     },
     {
       Name: 'PostgreSQL',
-      Skill: 0
+      Skill: 0,
+    },
+    {
+      Name: 'MartenDB',
+      Skill: 0,
     },
     {
       Name: 'MongoDB',
-      Skill: 3
-    }
+      Skill: 3,
+    },
+    {
+      Name: 'SQLite',
+      Skill: 0.5,
+    },
+  ],
+  DevOps: [
+    {
+      Name: 'Bash',
+      Skill: 0.5,
+    },
+    {
+      Name: 'Docker',
+      Skill: 0,
+    },
+    {
+      Name: 'Google Cloud',
+      Skill: 0,
+    },
+  ],
+  'Classic Frontend': [
+    {
+      Name: 'HTML',
+      Skill: 9,
+    },
+    {
+      Name: 'CSS',
+      Skill: 8,
+    },
+    {
+      Name: 'SCSS',
+      Skill: 6,
+    },
+    {
+      Name: 'Webpack',
+      Skill: 4,
+    },
   ],
   Others: [
     {
-      Name: 'GraphQL',
-      Skill: 0
-    },
-    {
       Name: 'WebAssembly',
-      Skill: 0
-    }
-  ]
+      Skill: 0,
+    },
+  ],
 }
 
-export const frameworks:Frameworks = {
-  'Testing & Linting': [
+export const frameworks: Frameworks = {
+  JavaScript: [
     {
       Name: 'ESLint',
-      Skill: 1
+      Skill: 1,
     },
     {
       Name: 'Prettier',
-      Skill: 1
+      Skill: 1,
     },
     {
       Name: 'Jest',
-      Skill: 0
+      Skill: 1,
     },
     {
       Name: 'Cypress',
-      Skill: 0
-    }
-  ],
-  JavaScript: [
-    {
-      Name: 'Axios',
-      Skill: 1
+      Skill: 0,
     },
     {
-      Name: 'Electron',
-      Skill: 0
-    }
+      Name: 'Axios',
+      Skill: 1,
+    },
+    {
+      Name: 'EmailJS',
+      Skill: 1,
+    },
   ],
   Vue: [
     {
       Name: 'VueRouter',
-      Skill: 1
+      Skill: 1,
     },
     {
       Name: 'VueX',
-      Skill: 0
+      Skill: 1,
     },
     {
       Name: 'Vuetify',
-      Skill: 0
-    }
-  ],
-  NodeJS: [
-    {
-      Name: 'Express',
-      Skill: 1
+      Skill: 0,
     },
     {
-      Name: 'NestJS',
-      Skill: 0
+      Name: 'NuxtJS',
+      Skill: 0,
     },
-    {
-      Name: 'EmailJS',
-      Skill: 1
-    }
   ],
-  Go: [
+  React: [
     {
-      Name: 'Gin',
-      Skill: 1
+      Name: 'Redux',
+      Skill: 0,
     },
-    {
-      Name: 'PixelGL',
-      Skill: 1
-    }
   ],
-  Dart: [
-    {
-      Name: 'Flutter',
-      Skill: 0
-    }
-  ],
-  Python: [
-    {
-      Name: 'Django',
-      Skill: 0
-    },
-    {
-      Name: 'FastAPI',
-      Skill: 0
-    }
-  ],
-  'C#': [
-    {
-      Name: 'ASP .NET',
-      Skill: 0
-    },
-    {
-      Name: 'Unity',
-      Skill: 0
-    }
-  ]
 }
 
 export const human: LangItem[] = [
   {
     Name: 'Polish',
     Skill: 10,
-    Native: true
+    Native: true,
   },
   {
     Name: 'English',
-    Skill: 6
+    Skill: 6,
   },
   {
     Name: 'German',
-    Skill: 3
-  }
+    Skill: 3,
+  },
 ]

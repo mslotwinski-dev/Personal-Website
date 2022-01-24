@@ -1,10 +1,14 @@
 <template>
   <article>
     <h1>
-        {{type}}
+      {{ type }}
     </h1>
     <div>
-        <SingleProject :project= 'project' v-for="project in ThisCategory" :key="project"/>
+      <SingleProject
+        :project="project"
+        v-for="project in ThisCategory"
+        :key="project"
+      />
     </div>
   </article>
 </template>
@@ -18,32 +22,30 @@ import { LangID } from '../../scripts/projects/langs'
 export default defineComponent({
   name: 'ProjectsList',
   props: ['type'],
-  data () {
+  data() {
     return {
       projects,
       LangID,
-      ThisCategory: projects.filter((value) => value.Category === this.type)
+      ThisCategory: projects.filter((value) => value.Category === this.type),
     }
   },
   components: {
-    SingleProject
-  }
+    SingleProject,
+  },
 })
 </script>
 
 <style scoped>
-
 div {
-  width:1200px;
-  max-width:95vw;
-  margin:10px auto;
-  padding:10px;
+  width: 1200px;
+  max-width: 95vw;
+  margin: 10px auto;
+  padding: 10px;
   background: rgb(221, 225, 226);
-  border-radius:10px;
+  border-radius: 10px;
 }
 
 article {
-  margin:20px 0;
+  margin: 20px 0;
 }
-
 </style>

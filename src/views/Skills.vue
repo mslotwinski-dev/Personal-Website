@@ -1,7 +1,7 @@
 <template>
   <main>
-    <BackButton @clicked="hideDumb"/>
-    <Skills :key="componentKey" ref="skills"/>
+    <BackButton @clicked="hideDumb" />
+    <Skills :key="componentKey" ref="skills" />
   </main>
 </template>
 
@@ -13,10 +13,10 @@ import Skills from '../components/Skills/Skills.vue'
 export default defineComponent({
   components: {
     BackButton,
-    Skills
+    Skills,
   },
   methods: {
-    hideDumb () {
+    hideDumb() {
       const a = localStorage.getItem('showDumb')
       if (a === 'no') {
         localStorage.setItem('showDumb', 'yes')
@@ -24,20 +24,18 @@ export default defineComponent({
         localStorage.setItem('showDumb', 'no')
       }
       this.componentKey += 1
+    },
+  },
+  data() {
+    return {
+      componentKey: 0,
     }
   },
-  data () {
-    return {
-      componentKey: 0
-    }
-  }
 })
 </script>
 
 <style>
-
 .imSoDumb {
-  display:none !important;
+  display: none !important;
 }
-
 </style>

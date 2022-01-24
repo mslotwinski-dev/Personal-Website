@@ -10,79 +10,89 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  mounted () {
+  mounted() {
     document.title = 'Mateusz Słotwiński'
-  }
+  },
 })
 </script>
 
 <style>
-
 /* Animations */
 
 .route-enter-from {
-  opacity:0;
-  transform:translateX(2em);
+  opacity: 0;
+  transform: translateX(2em);
 }
 
 .route-leave-to {
-  opacity:0;
-  transform:translateX(-2em);
+  opacity: 0;
+  transform: translateX(-2em);
 }
 
-.route-enter-active, .route-leave-active {
-  transition: .3s all ease
+.route-enter-active,
+.route-leave-active {
+  transition: 0.3s all ease;
 }
 
 /* Global styles */
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap');
 
-*,*:before,*:after {
-    box-sizing:border-box;
-    position: relative;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  position: relative;
 }
 
-*::-moz-selection { /* Code for Firefox */
-  background: #00A3CC !important;
+*::-moz-selection {
+  /* Code for Firefox */
+  background: #00a3cc !important;
 }
 
 *::selection {
-  background: #00A3CC !important;
+  background: #00a3cc !important;
 }
 
 html {
-    font-family: 'Rubik', sans-serif !important;
+  font-family: 'Rubik', sans-serif !important;
 }
 
 body {
-    padding: 0px !important;
-    margin: 0px !important;
-    overflow-x:hidden;
-    background-color:#EBEAED;
-    color:#262626;
+  padding: 0px !important;
+  margin: 0px !important;
+  overflow-x: hidden;
+  background-color: #ebeaed;
+  color: #262626;
 }
 
 a {
-    text-decoration: none;
-    color:#262626;
-    cursor: pointer;
+  text-decoration: none;
+  color: #262626;
+  cursor: pointer;
 }
 
-input, button, select, textarea {
-    font-family: 'Rubik', sans-serif;
-    border:none;
-    background-color:#e3e3e3;
-    color:#333;
-    padding:0;
+input,
+button,
+select,
+textarea {
+  font-family: 'Rubik', sans-serif;
+  border: none;
+  background-color: #e3e3e3;
+  color: #333;
+  padding: 0;
 }
 
-button, select {
-    cursor:pointer;
+button,
+select {
+  cursor: pointer;
 }
 
-button:focus, input:focus, select:focus, textarea:focus{
-    outline:0 !important;
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0 !important;
 }
 
 ::-webkit-scrollbar {
@@ -102,23 +112,24 @@ button:focus, input:focus, select:focus, textarea:focus{
 }
 
 h1 {
-    font-size:calc(12px + 1.2vw);
-    justify-content:center;
-    display:flex;
-    align-items:center;
+  font-size: calc(12px + 1.2vw);
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
-h1:before, h1:after {
-    content:'';
-    flex-grow:1;
-    margin:0 20px;
-    border:1px solid #262626;
+h1:before,
+h1:after {
+  content: '';
+  flex-grow: 1;
+  margin: 0 20px;
+  border: 1px solid #262626;
 }
 
 main {
-    width:95vw;
-    max-width:1700px;
-    margin:auto;
-    min-height: 100vh;
+  width: 95vw;
+  max-width: 1700px;
+  margin: auto;
+  min-height: 100vh;
 }
 </style>

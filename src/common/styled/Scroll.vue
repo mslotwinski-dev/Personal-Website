@@ -10,14 +10,14 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: 'Scroll'
+  name: 'Scroll',
 })
 </script>
 
 <style scoped>
 .container {
   display: inline-block;
-  transform:translateX(-1.05rem)
+  transform: translateX(-1.05rem);
 }
 
 .chevron {
@@ -27,22 +27,22 @@ export default defineComponent({
   opacity: 0;
   transform: scale(0.3);
   -webkit-animation: move-chevron 3s ease-out infinite;
-          animation: move-chevron 3s ease-out infinite;
+  animation: move-chevron 3s ease-out infinite;
 }
 
 .chevron:first-child {
   -webkit-animation: move-chevron 3s ease-out 1s infinite;
-          animation: move-chevron 3s ease-out 1s infinite;
+  animation: move-chevron 3s ease-out 1s infinite;
 }
 
 .chevron:nth-child(2) {
   -webkit-animation: move-chevron 3s ease-out 2s infinite;
-          animation: move-chevron 3s ease-out 2s infinite;
+  animation: move-chevron 3s ease-out 2s infinite;
 }
 
 .chevron:before,
 .chevron:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   height: 100%;

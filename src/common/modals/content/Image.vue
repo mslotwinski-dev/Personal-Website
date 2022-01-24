@@ -1,8 +1,12 @@
 <template>
-   <div class="container">
-     <section :style="{ height: lockHeight + 'px', 'backgroundImage': 'url(' + getImgUrl(image) + ')' }" >
-     </section>
-   </div>
+  <div class="container">
+    <section
+      :style="{
+        height: lockHeight + 'px',
+        backgroundImage: 'url(' + getImgUrl(image) + ')',
+      }"
+    ></section>
+  </div>
 </template>
 
 <script lang="ts">
@@ -11,53 +15,50 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'Image',
   props: ['image'],
-  data () {
+  data() {
     return { lockHeight: 1 }
   },
-  created () {
+  created() {
     window.addEventListener('resize', this.lockAspect)
     this.lockAspect()
   },
   methods: {
-    getImgUrl (pic: string) {
+    getImgUrl(pic: string) {
       return require('../../../assets/projects/screenshots/' + pic)
     },
-    resetAspect () {
+    resetAspect() {
       this.lockHeight = 1
     },
-    lockAspect () {
+    lockAspect() {
       setTimeout(() => {
-        const map: any = document.querySelector('section')!
+        // eslint-disable-next-line
+        const map: HTMLElement = document.querySelector('section')!
         this.lockHeight = map.offsetWidth / 1.777
       }, 1)
-    }
+    },
   },
-  components: {
-  }
+  components: {},
 })
-
 </script>
 
 <style scoped>
-
 .iconContainer {
-    width:100%;
-    height:100%;
-    transition:.2s all;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s all;
 }
 
 .container {
-   position: relative;
+  position: relative;
 }
 
 section {
-    display: block;
-    border-radius:5px;
-    background-position: center;
-    background-image: url('../../../assets/modals/maps/extended.png');
-    background-size: cover;
-    width: 100%;
-    transition:.2s all
+  display: block;
+  border-radius: 5px;
+  background-position: center;
+  background-image: url('../../../assets/modals/maps/extended.png');
+  background-size: cover;
+  width: 100%;
+  transition: 0.2s all;
 }
-
 </style>

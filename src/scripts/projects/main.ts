@@ -6,7 +6,7 @@ const descriptions: string[] = [
   'Something like google keep',
   'Soulgraphy is a social project whose main task is to enable users to get to know themselves and other people. To this end, the web application offers all interested parties a platform for publishing articles, discussions and taking tests to help determine your worldview.',
   'Unia Wolności (The Freedom Union) is a fictional political party whose program and assumptions were entirely written by me using the knowledge of economics, sociology and the right to improve the well-being of citizens. The program is available only in Polish',
-  'You are here ;>'
+  'You are here ;>',
 ]
 
 export const projects: Project[] = [
@@ -16,7 +16,7 @@ export const projects: Project[] = [
     Category: 'Quizzes',
     Link: {
       Content: 'analyseme',
-      Absolute: false
+      Absolute: false,
     },
     Code: 'Mateusz-Slotwinski/AnalyseMe',
     Created: 'VI 2020',
@@ -24,18 +24,18 @@ export const projects: Project[] = [
     Langs: [
       {
         Id: LangID[5],
-        Percentage: 85
+        Percentage: 85,
       },
       {
         Id: LangID[2],
-        Percentage: 10
+        Percentage: 10,
       },
       {
         Id: LangID[1],
-        Percentage: 5
-      }
+        Percentage: 5,
+      },
     ],
-    Screenshots: ['analyseme1.png', 'analyseme2.png', 'analyseme3.png']
+    Screenshots: ['analyseme1.png', 'analyseme2.png', 'analyseme3.png'],
   },
   {
     Name: 'Soulgraphy',
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     Category: 'Quizzes',
     Link: {
       Content: 'soulgraphy.me',
-      Absolute: true
+      Absolute: true,
     },
     Code: '',
     Created: 'VI 2020',
@@ -51,22 +51,22 @@ export const projects: Project[] = [
     Langs: [
       {
         Id: LangID[1],
-        Percentage: 65
+        Percentage: 65,
       },
       {
         Id: LangID[2],
-        Percentage: 20
+        Percentage: 20,
       },
       {
         Id: LangID[5],
-        Percentage: 10
+        Percentage: 10,
       },
       {
         Id: LangID[18],
-        Percentage: 5
-      }
+        Percentage: 5,
+      },
     ],
-    Screenshots: ['soulgraphy1.png', 'soulgraphy2.png', 'soulgraphy3.png']
+    Screenshots: ['soulgraphy1.png', 'soulgraphy2.png', 'soulgraphy3.png'],
   },
   {
     Name: 'Personal Webpage',
@@ -74,7 +74,7 @@ export const projects: Project[] = [
     Category: 'Personal',
     Link: {
       Content: 'mslotwinski.eu',
-      Absolute: true
+      Absolute: true,
     },
     Code: 'Mateusz-Slotwinski/Personal-Website',
     Created: 'VI 2020',
@@ -82,18 +82,18 @@ export const projects: Project[] = [
     Langs: [
       {
         Id: LangID[7],
-        Percentage: 75
+        Percentage: 75,
       },
       {
         Id: LangID[6],
-        Percentage: 24
+        Percentage: 24,
       },
       {
         Id: LangID[0],
-        Percentage: 1
-      }
+        Percentage: 1,
+      },
     ],
-    Screenshots: []
+    Screenshots: [],
   },
   {
     Name: 'Note Keeper',
@@ -101,7 +101,7 @@ export const projects: Project[] = [
     Category: 'Minor',
     Link: {
       Content: '',
-      Absolute: false
+      Absolute: false,
     },
     Code: 'paprotka2137/NotepadAPP',
     Created: 'VI 2020',
@@ -109,18 +109,18 @@ export const projects: Project[] = [
     Langs: [
       {
         Id: LangID[11],
-        Percentage: 50
+        Percentage: 50,
       },
       {
         Id: LangID[8],
-        Percentage: 40
+        Percentage: 40,
       },
       {
         Id: LangID[21],
-        Percentage: 10
-      }
+        Percentage: 10,
+      },
     ],
-    Screenshots: []
+    Screenshots: [],
   },
   {
     Name: 'CubeCalc',
@@ -128,7 +128,7 @@ export const projects: Project[] = [
     Category: 'Minor',
     Link: {
       Content: '',
-      Absolute: false
+      Absolute: false,
     },
     Code: 'Mateusz-Slotwinski/CubeCalc',
     Created: 'VI 2020',
@@ -136,10 +136,10 @@ export const projects: Project[] = [
     Langs: [
       {
         Id: LangID[12],
-        Percentage: 100
-      }
+        Percentage: 100,
+      },
     ],
-    Screenshots: []
+    Screenshots: [],
   },
   {
     Name: 'Calculator',
@@ -147,7 +147,7 @@ export const projects: Project[] = [
     Category: 'Minor',
     Link: {
       Content: 'calc',
-      Absolute: false
+      Absolute: false,
     },
     Code: 'Mateusz-Slotwinski/Calculator',
     Created: 'VI 2020',
@@ -155,18 +155,18 @@ export const projects: Project[] = [
     Langs: [
       {
         Id: LangID[8],
-        Percentage: 87
+        Percentage: 87,
       },
       {
         Id: LangID[3],
-        Percentage: 12
+        Percentage: 12,
       },
       {
         Id: LangID[0],
-        Percentage: 1
-      }
+        Percentage: 1,
+      },
     ],
-    Screenshots: []
+    Screenshots: [],
   },
   {
     Name: 'Unia Wolności',
@@ -174,7 +174,7 @@ export const projects: Project[] = [
     Category: 'Minor',
     Link: {
       Content: 'uniawolnosci',
-      Absolute: false
+      Absolute: false,
     },
     Code: 'Mateusz-Slotwinski/Unia-Wolnosci',
     Created: 'VI 2020',
@@ -182,14 +182,14 @@ export const projects: Project[] = [
     Langs: [
       {
         Id: LangID[1],
-        Percentage: 50
+        Percentage: 50,
       },
       {
         Id: LangID[2],
-        Percentage: 50
-      }
+        Percentage: 50,
+      },
     ],
-    Screenshots: []
+    Screenshots: [],
   },
   {
     Name: 'eScience',
@@ -197,7 +197,7 @@ export const projects: Project[] = [
     Category: 'Non Profit',
     Link: {
       Content: 'escience',
-      Absolute: false
+      Absolute: false,
     },
     Code: 'Mateusz-Slotwinski/eScience',
     Created: 'VI 2020',
@@ -205,14 +205,14 @@ export const projects: Project[] = [
     Langs: [
       {
         Id: LangID[7],
-        Percentage: 85
+        Percentage: 85,
       },
       {
         Id: LangID[6],
-        Percentage: 15
-      }
+        Percentage: 15,
+      },
     ],
-    Screenshots: []
+    Screenshots: [],
   },
   {
     Name: 'Cloudy',
@@ -220,7 +220,7 @@ export const projects: Project[] = [
     Category: 'Personal',
     Link: {
       Content: 'cloudy',
-      Absolute: false
+      Absolute: false,
     },
     Code: 'Mateusz-Slotwinski/Cloudy',
     Created: 'VI 2020',
@@ -228,25 +228,25 @@ export const projects: Project[] = [
     Langs: [
       {
         Id: LangID[7],
-        Percentage: 50
+        Percentage: 50,
       },
       {
         Id: LangID[6],
-        Percentage: 20
+        Percentage: 20,
       },
       {
         Id: LangID[11],
-        Percentage: 25
+        Percentage: 25,
       },
       {
         Id: LangID[3],
-        Percentage: 4
+        Percentage: 4,
       },
       {
         Id: LangID[0],
-        Percentage: 1
-      }
+        Percentage: 1,
+      },
     ],
-    Screenshots: []
-  }
+    Screenshots: [],
+  },
 ]

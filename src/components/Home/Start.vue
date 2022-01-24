@@ -16,32 +16,30 @@ export default defineComponent({
   name: 'Start',
   components: {
     Scroll,
-    Hero
-  }
+    Hero,
+  },
 })
 </script>
 
 <style scoped>
-
 header {
-  width:100vw;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 h2 {
-  font-size:calc(20px + 2vw);
-  font-weight:600;
-  margin:0;
+  font-size: calc(20px + 2vw);
+  font-weight: 600;
+  margin: 0;
 }
 
 h3 {
-  font-size:calc(10px + 1vw);
+  font-size: calc(10px + 1vw);
   font-weight: 500;
-  margin:0;
+  margin: 0;
 }
-
 </style>

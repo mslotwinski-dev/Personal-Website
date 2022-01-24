@@ -1,8 +1,8 @@
 <template>
-    <article>
-        <h1>Experience</h1>
-        <ExperienceItem :work= 'work' v-for="work in works" :key="work.Name" />
-    </article>
+  <article>
+    <h1>Experience</h1>
+    <ExperienceItem :work="work" v-for="work in works" :key="work.Name" />
+  </article>
 </template>
 
 <script lang="ts">
@@ -12,18 +12,15 @@ import ExperienceItem from '../../common/items/ExperienceItem.vue'
 import { works } from '../../scripts/home/exp'
 
 export default defineComponent({
-  data () {
+  data() {
     return {
-      works
+      works,
     }
   },
   components: {
-    ExperienceItem
-  }
+    ExperienceItem,
+  },
 })
-
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

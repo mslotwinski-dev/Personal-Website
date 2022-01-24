@@ -1,9 +1,13 @@
 <template>
-    <article>
-        <h1>Education</h1>
-        <EducationItem :degree= 'degree' v-for="degree in degrees" :key="degree.Field" />
-        <Plans />
-    </article>
+  <article>
+    <h1>Education</h1>
+    <EducationItem
+      :degree="degree"
+      v-for="degree in degrees"
+      :key="degree.Field"
+    />
+    <Plans />
+  </article>
 </template>
 
 <script lang="ts">
@@ -14,23 +18,20 @@ import Plans from '../../common/styled/Plans.vue'
 import { degrees } from '../../scripts/home/education'
 
 export default defineComponent({
-  data () {
+  data() {
     return {
-      degrees
+      degrees,
     }
   },
   components: {
     EducationItem,
-    Plans
-  }
+    Plans,
+  },
 })
-
 </script>
 
 <style scoped>
-
 section:last-child {
-  opacity:0.65;
+  opacity: 0.65;
 }
-
 </style>

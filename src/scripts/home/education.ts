@@ -9,6 +9,6 @@ export const degrees: University[] = [
     Degree: null,
     University: 'IV Liceum Ogólnokształcące w Rzeszowie',
     Year: 2023,
-    Place: 'Rzeszow, Poland'
-  }
+    Place: 'Rzeszow, Poland',
+  },
 ]

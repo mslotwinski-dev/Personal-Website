@@ -2,56 +2,56 @@ import { Interest } from '../types/interfaces'
 
 export const interests: Interest[] = [
   {
-    Name: 'Economics'
+    Name: 'Economics',
   },
   {
-    Name: 'Mathematics'
+    Name: 'Mathematics',
   },
   {
-    Name: 'Physics'
+    Name: 'Physics',
   },
   {
-    Name: 'Informatics'
+    Name: 'Informatics',
   },
   {
-    Name: 'Law'
+    Name: 'Law',
   },
   {
-    Name: 'History'
+    Name: 'History',
   },
   {
-    Name: 'Politics'
+    Name: 'Politics',
   },
   {
-    Name: 'Philosophy'
+    Name: 'Philosophy',
   },
   {
-    Name: 'Sociology'
+    Name: 'Sociology',
   },
   {
-    Name: 'Psychology'
+    Name: 'Psychology',
   },
   {
     Name: 'Neurology',
-    Link: 'Neuroscience'
+    Link: 'Neuroscience',
   },
   {
-    Name: 'Biology'
+    Name: 'Biology',
   },
   {
-    Name: 'Biophysics'
+    Name: 'Biophysics',
   },
   {
-    Name: 'Zoology'
+    Name: 'Zoology',
   },
   {
-    Name: 'Anthropology'
+    Name: 'Anthropology',
   },
   {
-    Name: 'Electronics'
+    Name: 'Electronics',
   },
   {
     Name: 'Management',
-    Link: 'Management_science'
-  }
+    Link: 'Management_science',
+  },
 ]

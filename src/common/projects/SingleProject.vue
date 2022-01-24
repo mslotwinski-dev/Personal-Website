@@ -1,14 +1,14 @@
 <template>
-    <article>
-      <section>
-        <div class="hgw52a">
-          <Logo :project="project"/>
-          <LangGroup :project="project"/>
-        </div>
-        <ProjectData :project="project"/>
-      </section>
-      <Screenshots :project="project"/>
-    </article>
+  <article>
+    <section>
+      <div class="hgw52a">
+        <Logo :project="project" />
+        <LangGroup :project="project" />
+      </div>
+      <ProjectData :project="project" />
+    </section>
+    <Screenshots :project="project" />
+  </article>
 </template>
 
 <script lang="ts">
@@ -25,35 +25,33 @@ export default defineComponent({
     ProjectData,
     Logo,
     LangGroup,
-    Screenshots
-  }
+    Screenshots,
+  },
 })
 </script>
 
 <style scoped>
-
 article {
-  padding:10px;
-  margin:10px;
-  border-radius:5px;
-  background-color:#D6D8D8;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #d6d8d8;
 }
 
 section {
-  display:flex;
+  display: flex;
   justify-content: center;
-  padding:0 10px;
-  flex-wrap:wrap-reverse;
+  padding: 0 10px;
+  flex-wrap: wrap-reverse;
 }
 
 .hideDesc {
-  height:60px;
+  height: 60px;
   overflow: hidden;
 }
 
 .hgw52a {
-  max-width:80vw;
-  width:400px;
+  max-width: 80vw;
+  width: 400px;
 }
-
 </style>

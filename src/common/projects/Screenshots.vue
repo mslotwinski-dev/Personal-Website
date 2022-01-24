@@ -1,7 +1,11 @@
 <template>
-  <div class='screenshots' v-if="project.Screenshots.length > 0">
-    <Screen :screen="screen" v-for="screen in project.Screenshots" :key="screen" />
-    <Links :project="project"/>
+  <div class="screenshots" v-if="project.Screenshots.length > 0">
+    <Screen
+      :screen="screen"
+      v-for="screen in project.Screenshots"
+      :key="screen"
+    />
+    <Links :project="project" />
   </div>
 </template>
 
@@ -15,19 +19,17 @@ export default defineComponent({
   props: ['project'],
   components: {
     Links,
-    Screen
-  }
+    Screen,
+  },
 })
 </script>
 
 <style scoped>
-
 .screenshots {
-  display:flex;
+  display: flex;
   justify-content: space-around;
-  flex-wrap:wrap;
-  padding:0 10px;
-  margin:0 10px;
+  flex-wrap: wrap;
+  padding: 0 10px;
+  margin: 0 10px;
 }
-
 </style>

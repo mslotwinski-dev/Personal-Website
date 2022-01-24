@@ -1,13 +1,13 @@
 export class Home {
-    city: string
-    country: string
+  city: string
+  country: string
 
-    constructor (city:string, country:string) {
-      this.city = city
-      this.country = country
-    }
+  constructor(city: string, country: string) {
+    this.city = city
+    this.country = country
+  }
 
-    format (): string {
-      return `${this.city}, ${this.country}`
-    }
+  format(): string {
+    return `${this.city}, ${this.country}`
+  }
 }

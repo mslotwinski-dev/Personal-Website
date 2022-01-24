@@ -33,10 +33,10 @@ export default defineComponent({
     Experience,
     Link,
     Interests,
-    Contact
+    Contact,
   },
-  mounted () {
+  mounted() {
     document.title = 'Mateusz Słotwiński'
-  }
+  },
 })
 </script>
