@@ -47,7 +47,7 @@ export default defineComponent({
 })
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 h2 {
   max-width: 80vw;
   width: 900px;
@@ -75,8 +75,13 @@ ul {
   border-radius: 10px;
   padding: 5px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   flex-wrap: wrap;
+  background-color: #ebeaed;
+  transition: all 0.3s;
+  &:hover {
+    filter: brightness(0.98);
+  }
 }
 
 .group {

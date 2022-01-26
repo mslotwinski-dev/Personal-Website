@@ -19,6 +19,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   methods: {
     getImgUrl(pic: string) {
+      pic = pic.replaceAll(' ', '_').replaceAll('.', 'dot').toLowerCase()
       return require('../../assets/thumbnails/other-langs/' + pic + '.png')
     },
   },
@@ -35,13 +36,14 @@ export default defineComponent({
 div {
   padding: calc(2px + 0.2vw) calc(3px + 0.5vw);
   border-radius: 10px;
-  margin: calc(5px + 0.5vw);
+  margin: calc(3px + 0.3vw);
   background: #ccd1d399;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
   transition: 0.2s all;
+  flex-grow: 1;
 }
 
 div:hover {

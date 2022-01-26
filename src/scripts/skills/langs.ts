@@ -187,6 +187,14 @@ export const frameworks: Frameworks = {
       Name: 'EmailJS',
       Skill: 1,
     },
+    {
+      Name: 'Nodemon',
+      Skill: 1,
+    },
+    {
+      Name: 'TypeORM',
+      Skill: 0,
+    },
   ],
   Vue: [
     {
@@ -208,7 +216,21 @@ export const frameworks: Frameworks = {
   ],
   React: [
     {
+      Name: 'Styled Components',
+      Skill: 1,
+    },
+    {
       Name: 'Redux',
+      Skill: 0,
+    },
+  ],
+  'C++': [
+    {
+      Name: 'OpenGL',
+      Skill: 1,
+    },
+    {
+      Name: 'QT',
       Skill: 0,
     },
   ],
