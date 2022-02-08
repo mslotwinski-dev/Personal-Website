@@ -1,9 +1,6 @@
 <template>
   <h2></h2>
-  <div
-    class="others"
-    :class="{ dumb: dumb, imSoDumb: dumb && amIdumb == 'no' }"
-  >
+  <div class="others" :class="{ dumb: dumb }">
     <div class="group">{{ group }}</div>
     <OtherSkills :item="item" v-for="item in sortedArray" :key="item.Name" />
   </div>
@@ -13,7 +10,7 @@
 import { defineComponent } from 'vue'
 import OtherSkills from '../../common/items/OtherSkills.vue'
 import { general } from '../../data/skills/langs'
-import { Frameworks, LangItem } from '../../data/types/interfaces'
+import { LangItem } from '../../data/types/interfaces'
 
 export default defineComponent({
   props: ['name', 'group', 'type'],
@@ -23,9 +20,8 @@ export default defineComponent({
   data() {
     return {
       sortedArray: [],
-      general: general as Frameworks,
+      general,
       dumb: false,
-      amIdumb: localStorage.getItem('showDumb'),
     }
   },
   mounted() {
@@ -33,9 +29,10 @@ export default defineComponent({
     array.sort((a: LangItem, b: LangItem) => b.Skill - a.Skill)
     this.sortedArray = array
 
-    const thisLang = Object.values(this.general)
+    const thisLang: any = Object.values(this.general)
       .flat(1)
-      .find((element) => element.Name === this.group)
+      .find((element: any) => element.Name === this.group)
+
     const thisLenght = this.type[this.group].filter(
       (element: { Skill: number }) => element.Skill > 0
     ).length

@@ -22,10 +22,10 @@ export default defineComponent({
     }
   },
   methods: {
-    async getImgUrl(pic: string) {
-      return await import(/* @vite-ignore */ '../../../assets/thumbnails/human-langs/' +
+    getImgUrl(pic: string) {
+      return '../../../assets/thumbnails/human-langs/' +
         pic.toLowerCase() +
-        '.png')
+        '.png'
     },
   },
 })

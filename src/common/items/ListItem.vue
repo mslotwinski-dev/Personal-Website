@@ -2,12 +2,11 @@
   <li
     :class="{
       dumb: item.Skill == 0,
-      imSoDumb: item.Skill == 0 && amIdumb == 'no',
     }"
     v-on:click="toogleDetails"
   >
     <div class="codeName">
-      <img :src="url" />
+      <img :src="getImgUrl(imgFolder, item.Name)" />
       {{ item.Name }}
       <span class="nativeText" :class="{ notNative: !item.Native }">
         Native
@@ -27,24 +26,11 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   methods: {
-    async getImgUrl(folder: string, pic: string): Promise<string> {
-      pic = pic.replaceAll('.', 'dot').replaceAll(' ', '_').replaceAll('#', 'sharp')
-      const xxx = await import(/* @vite-ignore */ '../../assets/thumbnails/' + folder + '/' + pic + '.png')
-      const json = JSON.parse(JSON.stringify(xxx))
-      console.log(json.default.replace('/@fs', ''))
-      return json.default ? json.default.replace('/@fs', '') : json
+    getImgUrl(folder: string, pic: string) {
+      return '../../assets/thumbnails/' + folder + '/' + pic.replace(' ', '_').replace('.', 'dot').replace('#', 'sharp').toLowerCase() + '.png'
     },
   },
-  data() {
-    return {
-      amIdumb: localStorage.getItem('showDumb'),
-      url: ''
-    }
-  },
   props: ['item', 'imgFolder'],
-  mounted() {
-    this.getImgUrl(this.imgFolder, this.item.Name).then(res => this.url = res)
-  }
 })
 </script>
 

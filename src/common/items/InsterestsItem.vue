@@ -2,7 +2,7 @@
   <a
     :href="'https://en.wikipedia.org/wiki/' + (interest.Link || interest.Name)"
   >
-    <img :src="imgSrc" />
+    <img :src="getImgUrl(interest.Name.toLowerCase())" />
     {{ interest.Name }}
   </a>
 </template>
@@ -11,23 +11,13 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  
   methods: {
-    async getImgUrl(pic: string) {
-      const xxx = await import(/* @vite-ignore */ '../../assets/interests/' + pic + '.svg')
-      const json = JSON.parse(JSON.stringify(xxx))
-      console.log(json.default ? json.default : json)
-      return json.default ? json.default : json
+    getImgUrl(pic: string) {      
+      return '../../assets/interests/' + pic + '.svg'
     },
   },
-  data() {
-    return {
-      imgSrc: ''
-    }
-  },
   props: ['interest'],
-  mounted() {
-    this.getImgUrl(this.interest.Name.toLowerCase()).then(res => this.imgSrc = res)
-  }  
 })
 </script>
 <style scoped>

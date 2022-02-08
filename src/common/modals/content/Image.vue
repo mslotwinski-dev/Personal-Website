@@ -23,8 +23,8 @@ export default defineComponent({
     this.lockAspect()
   },
   methods: {
-    async getImgUrl(pic: string) {
-      return await import(/* @vite-ignore */ '../../../assets/projects/screenshots/' + pic)
+    getImgUrl(pic: string) {
+      return '../../../assets/projects/screenshots/' + pic
     },
     resetAspect() {
       this.lockHeight = 1

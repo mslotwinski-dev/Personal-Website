@@ -19,8 +19,8 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   methods: {
-    async getImgUrl(pic: string) {
-      return await import(/* @vite-ignore */ '../../assets/thumbnails/other-langs/' + pic + '.png')
+    getImgUrl(pic: string) {
+      return '../../assets/thumbnails/other-langs/' + pic + '.png'
     },
   },
   props: ['item'],

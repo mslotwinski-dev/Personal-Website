@@ -39,7 +39,7 @@ import { projects } from '../../data/projects/main'
 import { data } from '../../data/static'
 
 export default defineComponent({
-  name: 'List',
+  name: 'Summary',
   props: ['type'],
   data() {
     return {

@@ -8,8 +8,8 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'ModalIcon',
   methods: {
-    async getImgUrl(pic: string) {
-      return await import(/* @vite-ignore */ '../../assets/icons/' + pic + '.svg')
+    getImgUrl(pic: string) {
+      return '../../assets/icons/' + pic + '.svg'
     },
   },
   props: ['icon'],
