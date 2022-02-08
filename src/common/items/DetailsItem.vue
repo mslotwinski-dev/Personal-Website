@@ -1,7 +1,7 @@
 <template>
   <li :class="{ dumb: item.Skill == 0 }" v-on:click="toogleDetails">
     <div class="codeName">
-      <img :src="getImgUrl(imgFolder, item.Name.toLowerCase())" />
+      <img :src="namesrc" />
       {{ item.Name }}
       <span class="nativeText" :class="{ notNative: !item.Native }">
         Native
@@ -16,7 +16,7 @@
   </li>
   <ul class="details" v-if="item.Details && showDetails == true">
     <li v-for="details in item.Details" :key="details">
-      <img :src="getImgUrl('other-langs', details.toLowerCase())" />
+      <img :src="detsrc" />
       {{ details }}
     </li>
   </ul>
@@ -26,9 +26,20 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
+  async mounted() {
+    this.getImgUrl(this.imgFolder, this.item.Name.toLowerCase()).then(res => {
+      this.namesrc = res
+    })
+    this.getImgUrl('other-langs', this.item.details.toLowerCase()).then(res => {
+      this.detsrc = res
+    })
+  },
   methods: {
-    async getImgUrl(folder: string, pic: string) {
-      return await import(/* @vite-ignore */ '../../assets/thumbnails/' + folder + '/' + pic + '.png')
+    async getImgUrl(folder: string, pic: string): Promise<string> {
+      const xxx = await import(/* @vite-ignore */ '../../assets/thumbnails/' + folder + '/' + pic + '.svg')
+      const json = JSON.parse(JSON.stringify(xxx))
+      console.log(json)
+      return json.default ? json.default : json
     },
     toogleDetails() {
       this.showDetails = !this.showDetails
@@ -37,6 +48,8 @@ export default defineComponent({
   data() {
     return {
       showDetails: false,
+      namesrc: '',
+      detsrc: '',
     }
   },
   props: ['item', 'imgFolder'],

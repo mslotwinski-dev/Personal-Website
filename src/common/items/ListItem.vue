@@ -7,7 +7,7 @@
     v-on:click="toogleDetails"
   >
     <div class="codeName">
-      <img :src="getImgUrl(imgFolder, item.Name)" />
+      <img :src="url" />
       {{ item.Name }}
       <span class="nativeText" :class="{ notNative: !item.Native }">
         Native
@@ -27,18 +27,24 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   methods: {
-    async getImgUrl(folder: string, pic: string) {
-      pic = pic.replaceAll(' ', '_').replaceAll('.', 'dot').toLowerCase()
-
-      return await import(/* @vite-ignore */ '../../assets/thumbnails/' + folder + '/' + pic + '.png')
+    async getImgUrl(folder: string, pic: string): Promise<string> {
+      pic = pic.replaceAll('.', 'dot').replaceAll(' ', '_').replaceAll('#', 'sharp')
+      const xxx = await import(/* @vite-ignore */ '../../assets/thumbnails/' + folder + '/' + pic + '.png')
+      const json = JSON.parse(JSON.stringify(xxx))
+      console.log(json.default.replace('/@fs', ''))
+      return json.default ? json.default.replace('/@fs', '') : json
     },
   },
   data() {
     return {
       amIdumb: localStorage.getItem('showDumb'),
+      url: ''
     }
   },
   props: ['item', 'imgFolder'],
+  mounted() {
+    this.getImgUrl(this.imgFolder, this.item.Name).then(res => this.url = res)
+  }
 })
 </script>
 
