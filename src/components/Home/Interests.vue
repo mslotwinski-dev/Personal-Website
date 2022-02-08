@@ -15,7 +15,7 @@
 import { defineComponent } from 'vue'
 
 import InsterestsItem from '../../common/items/InsterestsItem.vue'
-import { interests } from '../../scripts/home/interests'
+import { interests } from '../../data/home/interests'
 
 export default defineComponent({
   data() {

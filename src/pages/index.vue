@@ -8,7 +8,7 @@
       <Link link="skills" />
       <Link link="projects" />
       <Interests />
-      <Contact />
+      <!-- <Contact /> -->
     </main>
   </div>
 </template>
@@ -22,9 +22,9 @@ import Education from '../components/Home/Education.vue'
 import Experience from '../components/Home/Experience.vue'
 import Link from '../common/styled/Link.vue'
 import Interests from '../components/Home/Interests.vue'
-import Contact from '../components/Contact/Contact.vue'
+// import Contact from '../components/Contact/Contact.vue'
 
-export default defineComponent({
+export default {
   name: 'Home',
   components: {
     Start,
@@ -33,10 +33,10 @@ export default defineComponent({
     Experience,
     Link,
     Interests,
-    Contact,
+    // Contact,
   },
   mounted() {
     document.title = 'Mateusz Słotwiński'
   },
-})
+}
 </script>

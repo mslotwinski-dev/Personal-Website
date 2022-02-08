@@ -15,7 +15,7 @@ import { defineComponent } from 'vue'
 
 import EducationItem from '../../common/items/EducationItem.vue'
 import Plans from '../../common/styled/Plans.vue'
-import { degrees } from '../../scripts/home/education'
+import { degrees } from '../../data/home/education'
 
 export default defineComponent({
   data() {

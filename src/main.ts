@@ -1,6 +1,7 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import './registerServiceWorker'
-import router from './router'
+import { NuxtConfig } from 'nuxt3'
 
-createApp(App).use(router).mount('#app')
+const App: NuxtConfig = {
+    srcDir: 'src/'
+}
+
+export default App

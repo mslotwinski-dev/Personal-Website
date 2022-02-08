@@ -27,10 +27,10 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   methods: {
-    getImgUrl(folder: string, pic: string) {
+    async getImgUrl(folder: string, pic: string) {
       pic = pic.replaceAll(' ', '_').replaceAll('.', 'dot').toLowerCase()
 
-      return require('../../assets/thumbnails/' + folder + '/' + pic + '.png')
+      return await import(/* @vite-ignore */ '../../assets/thumbnails/' + folder + '/' + pic + '.png')
     },
   },
   data() {

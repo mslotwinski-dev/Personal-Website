@@ -13,7 +13,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import ListItem from '../../common/items/ListItem.vue'
-import { LangItem } from '../../scripts/types/interfaces'
+import { LangItem } from '../../data/types/interfaces'
 
 export default defineComponent({
   props: ['name', 'group', 'type'],

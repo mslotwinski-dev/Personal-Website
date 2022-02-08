@@ -16,7 +16,7 @@
 import { defineComponent } from 'vue'
 import MapIcon from './MapIcon.vue'
 
-import { cities } from '../../../scripts/modals/map'
+import { cities } from '../../../data/modals/map'
 
 export default defineComponent({
   name: 'Map',

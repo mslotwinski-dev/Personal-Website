@@ -16,8 +16,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import SingleProject from '../../common/projects/SingleProject.vue'
-import { projects } from '../../scripts/projects/main'
-import { LangID } from '../../scripts/projects/langs'
+import { projects } from '../../data/projects/main'
+import { LangID } from '../../data/projects/langs'
 
 export default defineComponent({
   name: 'ProjectsList',

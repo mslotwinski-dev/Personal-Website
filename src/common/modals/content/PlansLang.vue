@@ -11,7 +11,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { langs } from '../../../scripts/modals/plans'
+import { langs } from '../../../data/modals/plans'
 
 export default defineComponent({
   name: 'PlansLang',
@@ -22,8 +22,8 @@ export default defineComponent({
     }
   },
   methods: {
-    getImgUrl(pic: string) {
-      return require('../../../assets/thumbnails/human-langs/' +
+    async getImgUrl(pic: string) {
+      return await import(/* @vite-ignore */ '../../../assets/thumbnails/human-langs/' +
         pic.toLowerCase() +
         '.png')
     },

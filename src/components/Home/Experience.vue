@@ -9,7 +9,7 @@
 import { defineComponent } from 'vue'
 
 import ExperienceItem from '../../common/items/ExperienceItem.vue'
-import { works } from '../../scripts/home/exp'
+import { works } from '../../data/home/exp'
 
 export default defineComponent({
   data() {

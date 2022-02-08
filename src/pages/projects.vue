@@ -14,7 +14,7 @@ import { defineComponent } from 'vue'
 import BackButton from '../common/styled/BackButton.vue'
 // import List from '../components/Projects/List.vue'
 // import ProjectsList from '../components/Projects/ProjectsList.vue'
-import { ProjectType } from '../scripts/types/enums'
+import { ProjectType } from '../data/types/enums'
 
 export default defineComponent({
   name: 'Projects',

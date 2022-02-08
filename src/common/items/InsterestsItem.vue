@@ -12,8 +12,9 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   methods: {
-    getImgUrl(pic: string) {
-      return require('../../assets/interests/' + pic + '.svg')
+    async getImgUrl(pic: string) {
+      const img = await import(/* @vite-ignore */ '../../assets/interests/' + pic + '.svg')
+      return img.default.replace(/^\/@fs/, '')
     },
   },
   props: ['interest'],

@@ -12,8 +12,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import OtherSkills from '../../common/items/OtherSkills.vue'
-import { general } from '../../scripts/skills/langs'
-import { LangItem } from '../../scripts/types/interfaces'
+import { general } from '../../data/skills/langs'
+import { Frameworks, LangItem } from '../../data/types/interfaces'
 
 export default defineComponent({
   props: ['name', 'group', 'type'],
@@ -23,7 +23,7 @@ export default defineComponent({
   data() {
     return {
       sortedArray: [],
-      general,
+      general: general as Frameworks,
       dumb: false,
       amIdumb: localStorage.getItem('showDumb'),
     }

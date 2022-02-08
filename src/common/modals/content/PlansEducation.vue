@@ -15,7 +15,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { education } from '../../../scripts/modals/plans'
+import { education } from '../../../data/modals/plans'
 
 export default defineComponent({
   data() {

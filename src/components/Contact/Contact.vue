@@ -18,15 +18,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
-import { mailApp } from '../../scripts/contact'
+import { mailApp } from '../../data/contact'
 
-export default defineComponent({
+export default {
   methods: {
     sendEmail: mailApp,
   },
   name: 'Contact',
-})
+}
 </script>
 
 <style scoped>
