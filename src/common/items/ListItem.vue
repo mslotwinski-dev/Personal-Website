@@ -2,6 +2,7 @@
   <li
     :class="{
       dumb: item.Skill == 0,
+      imSoDumb: item.Skill == 0 && amIdumb == 'no',
     }"
     v-on:click="toogleDetails"
   >
@@ -27,8 +28,15 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   methods: {
     getImgUrl(folder: string, pic: string) {
-      return '../../assets/thumbnails/' + folder + '/' + pic.replace(' ', '_').replace('.', 'dot').replace('#', 'sharp').toLowerCase() + '.png'
+      pic = pic.replaceAll(' ', '_').replaceAll('.', 'dot').toLowerCase()
+
+      return require('../../assets/thumbnails/' + folder + '/' + pic + '.png')
     },
+  },
+  data() {
+    return {
+      amIdumb: localStorage.getItem('showDumb'),
+    }
   },
   props: ['item', 'imgFolder'],
 })

@@ -24,7 +24,7 @@ export default defineComponent({
   },
   methods: {
     getImgUrl(pic: string) {
-      return '../../../assets/projects/screenshots/' + pic
+      return require('../../../assets/projects/screenshots/' + pic)
     },
     resetAspect() {
       this.lockHeight = 1

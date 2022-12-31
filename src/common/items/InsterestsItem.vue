@@ -11,10 +11,9 @@
 import { defineComponent } from 'vue'
 
 export default defineComponent({
-  
   methods: {
-    getImgUrl(pic: string) {      
-      return '../../assets/interests/' + pic + '.svg'
+    getImgUrl(pic: string) {
+      return require('../../assets/interests/' + pic + '.svg')
     },
   },
   props: ['interest'],

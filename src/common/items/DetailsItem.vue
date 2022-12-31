@@ -28,7 +28,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   methods: {
     getImgUrl(folder: string, pic: string) {
-      return '../../assets/thumbnails/' + folder + '/' + pic + '.png'
+      return require('../../assets/thumbnails/' + folder + '/' + pic + '.png')
     },
     toogleDetails() {
       this.showDetails = !this.showDetails

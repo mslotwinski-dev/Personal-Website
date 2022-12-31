@@ -9,8 +9,8 @@ export default defineComponent({
   name: 'Logo',
   props: ['project'],
   methods: {
-    async getImgUrl(pic: string) {
-      return await import(/* @vite-ignore */ '../../assets/projects/logo/' + pic)
+    getImgUrl(pic: string) {
+      return require('../../assets/projects/logo/' + pic)
     },
   },
   data() {

@@ -33,7 +33,7 @@ import { defineComponent } from 'vue'
 import Group from './Group.vue'
 import Minor from './Minor.vue'
 import ListItem from '../../common/items/ListItem.vue'
-import { general, frameworks, human } from '../../data/skills/langs'
+import { general, frameworks, human } from '../../scripts/skills/langs'
 
 export default defineComponent({
   name: 'Projects',

@@ -35,11 +35,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { projects } from '../../data/projects/main'
-import { data } from '../../data/static'
+import { projects } from '../../scripts/projects/main'
+import { data } from '../../static/data'
 
 export default defineComponent({
-  name: 'Summary',
+  name: 'ProjectsList',
   props: ['type'],
   data() {
     return {
@@ -48,8 +48,8 @@ export default defineComponent({
     }
   },
   methods: {
-    async getImgUrl(pic: string) {
-      return import('../../assets/icons/' + pic + '.svg')
+    getImgUrl(pic: string) {
+      return require('../../assets/icons/' + pic + '.svg')
     },
     toToAbsUrl(url: string) {
       window.location.href = url

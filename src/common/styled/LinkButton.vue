@@ -9,7 +9,7 @@ export default defineComponent({
   name: 'ModalIcon',
   methods: {
     getImgUrl(pic: string) {
-      return '../../assets/icons/' + pic
+      return require('../../assets/icons/' + pic)
     },
   },
   props: ['icon'],

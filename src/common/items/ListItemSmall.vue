@@ -20,7 +20,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   methods: {
     getImgUrl(pic: string) {
-      return '../../assets/thumbnails/other-langs/' + pic + '.png'
+      return require('../../assets/thumbnails/other-langs/' + pic + '.png')
     },
   },
   props: ['item'],

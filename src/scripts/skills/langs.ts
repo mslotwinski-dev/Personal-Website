@@ -4,7 +4,7 @@ export const general: Frameworks = {
   Languages: [
     {
       Name: 'JavaScript',
-      Skill: 7.8,
+      Skill: 8,
     },
     {
       Name: 'TypeScript',
@@ -20,23 +20,19 @@ export const general: Frameworks = {
     },
     {
       Name: 'C#',
-      Skill: 2.5,
+      Skill: 2,
     },
     {
       Name: 'Dart',
-      Skill: 2.5,
+      Skill: 2,
     },
     {
       Name: 'Elixir',
-      Skill: 0.5,
-    },
-    {
-      Name: 'Rust',
-      Skill: 0,
+      Skill: 1,
     },
     {
       Name: 'Python',
-      Skill: 0,
+      Skill: 0.5,
     },
   ],
   Frontend: [
@@ -56,11 +52,11 @@ export const general: Frameworks = {
   Backend: [
     {
       Name: 'NodeJS',
-      Skill: 7,
+      Skill: 6,
     },
     {
       Name: 'Express',
-      Skill: 6,
+      Skill: 5,
     },
     {
       Name: 'Gin',
@@ -68,27 +64,19 @@ export const general: Frameworks = {
     },
     {
       Name: 'NestJS',
-      Skill: 1.5,
+      Skill: 2.5,
+    },
+    {
+      Name: 'FastAPI',
+      Skill: 1,
     },
     {
       Name: 'ASP .NET',
-      Skill: 2,
-    },
-    {
-      Name: 'Deno',
-      Skill: 1,
+      Skill: 3,
     },
     {
       Name: 'GraphQL',
       Skill: 0.5,
-    },
-    {
-      Name: 'FastAPI',
-      Skill: 0,
-    },
-    {
-      Name: 'Rocket',
-      Skill: 0,
     },
     {
       Name: 'Phoenix',
@@ -140,10 +128,6 @@ export const general: Frameworks = {
     },
     {
       Name: 'Docker',
-      Skill: 0,
-    },
-    {
-      Name: 'CircleCI',
       Skill: 0,
     },
     {
@@ -227,7 +211,7 @@ export const frameworks: Frameworks = {
     },
     {
       Name: 'NuxtJS',
-      Skill: 1,
+      Skill: 0,
     },
   ],
   React: [

@@ -8,8 +8,8 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   props: ['screen'],
   methods: {
-    async getImgUrl(pic: string) {
-      return await import(/* @vite-ignore */ '../../assets/projects/screenshots/' + pic)
+    getImgUrl(pic: string) {
+      return require('../../assets/projects/screenshots/' + pic)
     },
   },
 })

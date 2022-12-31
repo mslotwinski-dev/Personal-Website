@@ -16,7 +16,6 @@ import { defineComponent } from 'vue'
 import Modal from '../modals/Modal.vue'
 
 export default defineComponent({
-  name: 'Plans',
   components: {
     Modal,
   },

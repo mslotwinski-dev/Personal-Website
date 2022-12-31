@@ -2,9 +2,14 @@
   <div
     :class="{
       dumb: item.Skill == 0,
+      imSoDumb: item.Skill == 0 && amIdumb == 'no',
     }"
   >
-    <img :src="getImgUrl(item.Name.toLowerCase())" />
+    <img
+      v-if="item.Name != 'ASP .NET'"
+      :src="getImgUrl(item.Name.toLowerCase())"
+    />
+    <img v-if="item.Name == 'ASP .NET'" :src="getImgUrl('dotnet')" />
     {{ item.Name }}
   </div>
 </template>
@@ -14,14 +19,16 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   methods: {
     getImgUrl(pic: string) {
-      return (
-        '../../assets/thumbnails/programming-langs/' +
-        pic.replace(' ', '_').replace('.', 'dot').toLowerCase() +
-        '.png'
-      )
+      pic = pic.replaceAll(' ', '_').replaceAll('.', 'dot').toLowerCase()
+      return require('../../assets/thumbnails/other-langs/' + pic + '.png')
     },
   },
   props: ['item'],
+  data() {
+    return {
+      amIdumb: localStorage.getItem('showDumb'),
+    }
+  },
 })
 </script>
 

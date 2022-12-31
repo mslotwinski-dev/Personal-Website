@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { mailApp } from '../../data/contact'
+import { mailApp } from '../../scripts/contact'
 
 export default defineComponent({
   methods: {

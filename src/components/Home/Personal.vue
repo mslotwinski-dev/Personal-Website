@@ -34,7 +34,7 @@
 import { defineComponent } from 'vue'
 import Modal from '../../common/modals/Modal.vue'
 import ModalIcon from '../../common/styled/Icon.vue'
-import { age, home } from '../../data/home/personal'
+import { age, home } from '../../scripts/home/personal'
 
 export default defineComponent({
   methods: {
