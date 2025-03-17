@@ -1,6 +1,16 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import './registerServiceWorker'
+
+import VueSmoothScroll from 'vue3-smooth-scroll'
+import scrollsettings from './config/scroll'
+import FontAwesomeIcon from './config/icons'
+
 import router from './router'
 
-createApp(App).use(router).mount('#app')
+import './registerServiceWorker'
+
+createApp(App)
+  .component('ic', FontAwesomeIcon)
+  .use(VueSmoothScroll, scrollsettings)
+  .use(router)
+  .mount('#app')

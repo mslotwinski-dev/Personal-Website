@@ -1,4 +1,4 @@
-import { Degree, LangType, ProjectType } from './enums'
+import { Degree, LangType } from './enums'
 
 export interface University {
   Field: string

@@ -1,6 +1,5 @@
 import { University } from '../types/interfaces'
-// eslint-disable-next-line
-import { Degree } from '../types/enums'
+// import { Degree } from '../types/enums'
 
 export const degrees: University[] = [
   {

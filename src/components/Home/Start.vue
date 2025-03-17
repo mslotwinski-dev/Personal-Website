@@ -9,8 +9,8 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Scroll from '../../common/styled/Scroll.vue'
-import Hero from '../../common/styled/Hero.vue'
+import Scroll from '@/components/Shared/styled/Scroll.vue'
+import Hero from '@/components/Shared/styled/Hero.vue'
 
 export default defineComponent({
   name: 'Start',

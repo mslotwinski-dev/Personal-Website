@@ -8,23 +8,7 @@
       </li>
       <li>
         <div>Home:</div>
-        <div>
-          <ModalIcon
-            icon="question"
-            v-on:click="renderModal(true)"
-            @mouseover="isHovered = true"
-            @mouseleave="isHovered = false"
-            :class="{ notHovered: !isHovered }"
-          />
-          <Modal
-            @closeModal="renderModal(false)"
-            v-if="showModal"
-            ref="modal"
-            title="Rzeszów on map"
-            content="Map"
-          />
-          {{ home.format() }}
-        </div>
+        <div v-html="home.format()" />
       </li>
     </ul>
   </article>
@@ -32,27 +16,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import Modal from '../../common/modals/Modal.vue'
-import ModalIcon from '../../common/styled/Icon.vue'
 import { age, home } from '../../scripts/home/personal'
 
 export default defineComponent({
-  methods: {
-    renderModal(arg: boolean) {
-      this.showModal = arg
-    },
-  },
   data() {
     return {
       age: age,
       home: home,
-      isHovered: false,
-      showModal: false,
     }
-  },
-  components: {
-    Modal,
-    ModalIcon,
   },
 })
 </script>
